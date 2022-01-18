@@ -1,6 +1,5 @@
 <template>
   <div class = "all">
-
     <div class="cover">
       <div class="title">關於佳松</div>
       <div class="line"></div>
@@ -31,10 +30,11 @@
       </div>
     </div>
     <div class="objectives_content">
-      <div class="columns">
+      <div class="columns" id="app">
         <div class="column">
           <span class="index">1</span>
-          <span class="description">1</span>
+          <span class="description">123</span>
+          <!-- <div>index: ${ index }, name: ${ item.name }</div> -->
         </div>
       </div>
       <div></div>
@@ -47,13 +47,24 @@
         <p class="">每位需要被照顧服務者都是我們心中的寶貝，即使身體失能了、記憶力衰退了，還是值得被好好的照顧與關懷，佳松護理之家秉持用心照護，讓家屬安心托護，一起為被照顧服務者提供完善的生活品質！</p>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
+// import Vue from 'vue'
+// import router from './../router'
+// Vue.config.productionTip = false
 // import data from '../assets/data.json';
 // const objectives = data.objectives
+// Vue.createApp({
+//   data: {
+//     list: [
+//       { id: '123456789', name: '選項 1' },
+//       { id: '234567890', name: '選項 2' },
+//       { id: '345678901', name: '選項 3' }
+//     ]
+//   }
+// }).use(router).mount('#app')
 
 export default {
   name: 'HelloWorld',

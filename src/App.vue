@@ -1,58 +1,40 @@
 <template>
   <div class="navbar">
     <div>
-      <img class="picture" src="../src/assets/image2.png">
+    <img class="picture" src="../src/assets/image2.png">
     </div>
     <div class="links">
-      <a>組織架構</a>
+      <router-link to="/orginazation" class="link">組織架構</router-link>
       <span>|</span>
-      <a>服務介紹</a>
+      <router-link to="/" class="link">服務介紹</router-link>
       <span>|</span>
-      <a>環境介紹</a>
+      <router-link to="/" class="link">環境介紹</router-link>
       <span>|</span>
-      <a>活動花絮</a>
+      <router-link to="/" class="link">活動花絮</router-link>
     </div>
   </div>
-
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <Orginazation msg2="Welcome to Your Vue.js App"/>
-  
-  <div class="footer">
-    <div class="contact">
-      <div class="contact_content">
-        <div class="left">
-          <div class="contact_title">與我們聯絡</div>
-          <div class="contact_subtitle">Contact Us</div>
-          <img src="../src/assets/line.png">
-        </div>
-        <div class="right">
-          <div>1232323232</div>
+  <!-- <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> |
+    <router-link to="/orginazation">orginazation</router-link>
+  </div> -->
+  <router-view/>
+   <div class="footer">
+      <div class="contact">
+        <div class="contact_content">
+          <div class="left">
+            <div class="contact_title">與我們聯絡</div>
+            <div class="contact_subtitle">Contact Us</div>
+            <img src="../src/assets/line.png">
+          </div>
+          <div class="right">
+            <div>1232323232</div>
+          </div>
         </div>
       </div>
+      <div class="privacy"> © 2022 青松健康事業. All Rights Reserved.</div>
     </div>
-    <div class="privacy"> © 2022 青松健康事業. All Rights Reserved.</div>
-  </div>
 </template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-import Orginazation from './components/Orginazation.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    Orginazation
-  },
-  data(){
-    return {
-      
-    }
-  }
-}
-</script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -61,7 +43,17 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-.navbar {
+#nav {
+  padding: 30px;
+}
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+  .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,6 +69,10 @@ export default {
   line-height: 28px;
   color: #2C2C2C;
   margin-right: 32px;
+}
+.navbar .links .link{
+  color: #2C2C2C;
+  text-decoration: none;
 }
 .footer .contact {
   background-color: #CAE9BE;
