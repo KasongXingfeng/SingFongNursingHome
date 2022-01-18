@@ -16,4 +16,129 @@
 },{
   "objective":"提供24小時完善專業照顧，使住民健康獲得保障。"
 }
+],
+"jiasong":[
+  {
+    "picture":"../assets/img/Address.svg",
+    "content":"台中市豐原區南陽路197號"
+  },{
+    "picture":"../assets/img/Phone.svg",
+    "content":"04-25294989"
+  },{
+    "picture":"../assets/img/Office Phone.svg",
+    "content":"04-25294995"
+  },{
+    "picture":"../assets/img/Mail.svg",
+    "content":"goodcare568@gmail.com"
+  },{
+    "picture":"../assets/img/LINE.svg",
+    "content":"@653tghvd"
+  }
+],
+"client":[
+  {
+    "content":"病況穩定、無法獨力完成自我照顧者"
+  },
+  {
+    "content":"出院後或生活無法自理仍須接受24小時照顧者"
+  },
+  {
+    "content":"全癱或半癱者、行動不便者"
+  },
+  {
+    "content":"罹患慢性病需長期照護者、洗腎個案"
+  },
+  {
+    "content":"急性病出院後須繼續照顧者"
+  },
+  {
+    "content":"年邁身體機能退化者"
+  },
+  {
+    "content":"照顧家屬需休息的臨托失能者"
+  },
+  {
+    "content":"經專業人員訪視評估符合者"
+  }
+],
+"charges":[
+  {
+    "icon":"./../assets/img/Nurse.svg",
+    "charge":"生活照護",
+    "charge_item":[
+      {
+        "item_name":"六人房",
+        "price":"NT 33,000/月"
+      },
+      {
+        "item_name":"雙人房",
+        "price":"NT 40,000/月"
+      }
+    ]
+  },
+  {
+    "icon":"./../assets/img/Scuba Tank.svg",
+    "charge":"管路照護",
+    "charge_item":[
+      {
+        "item_name":"鼻胃管護理",
+        "price":"NT 1,500/月"
+      },
+      {
+        "item_name":"導尿管護理",
+        "price":"NT 1,500/月"
+      },
+      {
+        "item_name":"氣切護理",
+        "price":"NT 3,000/月"
+      }
+    ]
+  },
+  {
+    "icon":"./../assets/img/Oxygen Mask.svg",
+    "charge":"氧氣服務",
+    "charge_item":[
+      {
+        "item_name":"氧氣(鐵管)",
+        "price":"NT 100/hr"
+      },
+      {
+        "item_name":"24小時氧氣機租借",
+        "price":"NT 3,000/月"
+      }
+    ]
+  },{
+    "icon":"./../assets/img/Doctors Folder.svg",
+    "charge":"自行負擔",
+    "charge_item":[
+      {
+        "item_name":"血糖監測(含耗材)",
+        "price":"NT 50/次"
+      },
+      {
+        "item_name":"蒸氣吸入及抽痰",
+        "price":"NT 1,000/月"
+      },
+      {
+        "item_name":"氣墊床",
+        "price":"NT 3,000"
+      },
+      {
+        "item_name":"電費",
+        "price":"NT 500/月"
+      },
+      {
+        "item_name":"拋棄式導管",
+        "price":"NT 100/組"
+      },
+      {
+        "item_name":"傷口護理",
+        "price":"(小) NT 50/日"
+      },
+      {
+        "item_name":"",
+        "price":"(大) NT 100/日"
+      }
+    ]
+  }
 ]}

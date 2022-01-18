@@ -12,9 +12,15 @@
 </template>
 
 <script>
-
+import dataset from '../assets/data.json'
+const data = dataset.objectives
 export default {
   name: 'Orginazation',
+  data () {
+    return {
+      data: data
+    }
+  },
   props: {
     msg2: String
   }

@@ -28,46 +28,38 @@
         <div class="topic_eng">Service Objectives</div>
         <div class="title_line"></div>
       </div>
-    </div>
     <div class="objectives_content">
       <div class="columns" id="app">
-        <div class="column">
-          <span class="index">1</span>
-          <span class="description">123</span>
-          <!-- <div>index: ${ index }, name: ${ item.name }</div> -->
+        <div class="column" v-for="(item,index) in data" :key="item">
+          <span class="index_circle">
+            <span class="index">{{ index+1 }}</span>
+          </span>
+          <span class="description">{{ item.objective }}</span>
         </div>
       </div>
-      <div></div>
+    </div>
     </div>
     <div class="conclusion">
       <div class="conclusion_content">
         <div>
           <img src="./../assets/img/carbon_airline-passenger-care.svg">
         </div>
-        <p class="">每位需要被照顧服務者都是我們心中的寶貝，即使身體失能了、記憶力衰退了，還是值得被好好的照顧與關懷，佳松護理之家秉持用心照護，讓家屬安心托護，一起為被照顧服務者提供完善的生活品質！</p>
+        <p>每位需要被照顧服務者都是我們心中的寶貝，即使身體失能了、記憶力衰退了，還是值得被好好的照顧與關懷，佳松護理之家秉持用心照護，讓家屬安心托護，一起為被照顧服務者提供完善的生活品質！</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// import Vue from 'vue'
-// import router from './../router'
-// Vue.config.productionTip = false
-// import data from '../assets/data.json';
-// const objectives = data.objectives
-// Vue.createApp({
-//   data: {
-//     list: [
-//       { id: '123456789', name: '選項 1' },
-//       { id: '234567890', name: '選項 2' },
-//       { id: '345678901', name: '選項 3' }
-//     ]
-//   }
-// }).use(router).mount('#app')
-
+import dataset from '../assets/data.json'
+const data = dataset.objectives
 export default {
   name: 'HelloWorld',
+  data () {
+    return {
+      data: data
+    }
+  },
   props: {
     msg: String
   }
@@ -143,6 +135,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 82px;
 }
 .all .objectives .objectives_top {
   width: 77%;
@@ -171,21 +164,40 @@ export default {
   line-height: 21px;
   color: #2C2C2C;
 }
-.all .objectives .objectives_content .column {
+.all .objectives_content {
+  width: 77%;
+}
+.all .objectives_content .columns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+.all .objectives_content .column {
   width: 47%;
+  border-radius: 99px;
+  background-color: #CAE9BE;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 5px;
+}
+.all .objectives_content .index_circle{
+  background-color: #ffffff;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
 }
-.all .objectives .objectives_content .index{
-  background-color: #ffffff;
-  border-radius: 50%;
+.all .objectives_content .index{
   font-weight: bold;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 45px;
   color: #888888;
 }
-.all .objectives .objectives_content .description{
+.all .objectives_content .description{
   font-size: 18px;
   line-height: 21px;
+  /* padding: 5px 0; */
   color: #2C2C2C;
 }
 .conclusion {

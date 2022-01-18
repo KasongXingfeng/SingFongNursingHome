@@ -1,16 +1,14 @@
 <template>
   <div class="navbar">
-    <div>
-    <img class="picture" src="../src/assets/image2.png">
-    </div>
+    <router-link to="/"><img class="picture" src="../src/assets/image2.png"></router-link>
     <div class="links">
       <router-link to="/orginazation" class="link">組織架構</router-link>
       <span>|</span>
-      <router-link to="/" class="link">服務介紹</router-link>
+      <router-link to="/service" class="link">服務介紹</router-link>
       <span>|</span>
-      <router-link to="/" class="link">環境介紹</router-link>
+      <router-link to="/environment" class="link">環境介紹</router-link>
       <span>|</span>
-      <router-link to="/" class="link">活動花絮</router-link>
+      <router-link to="/activities" class="link">活動花絮</router-link>
     </div>
   </div>
   <!-- <div id="nav">
@@ -35,6 +33,21 @@
       <div class="privacy"> © 2022 青松健康事業. All Rights Reserved.</div>
     </div>
 </template>
+<script>
+// import dataset from '../assets/data.json'
+// const data = dataset.jiasong
+// export default {
+//   name: 'App',
+//   data () {
+//     return {
+//       data: data
+//     }
+//   },
+//   props: {
+//     msg: String
+//   }
+// }
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
