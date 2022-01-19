@@ -1,6 +1,8 @@
 <template>
-  <div class="navbar">
-    <router-link to="/homepage"><img class="picture" src="./../assets/image2.png"></router-link>
+  <div class="navbar" v-on:click="closeNav">
+    <router-link to="/homepage">
+      <img class="picture" src="./../assets/image2.png">
+    </router-link>
     <div class="links">
       <router-link to="/orginazation" class="link">組織架構</router-link>
       <span>|</span>
@@ -10,21 +12,21 @@
       <span>|</span>
       <router-link to="/activities" class="link">活動花絮</router-link>
     </div>
-    <div class="links_md" v-on:click="openNav" v-if="!sidebarOpen">
-      <img src="./../assets/img/Menu.svg">
-    </div>
-    <div id="mySidenav" class="sidenav" v-if="sidebarOpen">
-      <div class="close">
-        <img src="./../assets/img/close.svg" v-on:click="closeNav"/>
-      </div>
-      <router-link to="/orginazation" class="link">組織架構</router-link>
-      <router-link to="/service" class="link">服務介紹</router-link>
-      <router-link to="/environment" class="link">環境介紹</router-link>
-      <router-link to="/activities" class="link">活動花絮</router-link>
-    </div>
   </div>
-  <router-view/>
-   <div class="footer">
+  <div class="links_md" v-on:click="openNav" v-if="!sidebarOpen">
+    <img src="./../assets/img/Menu.svg">
+  </div>
+  <div id="mySidenav" class="sidenav" v-if="sidebarOpen">
+    <div class="close">
+      <img src="./../assets/img/close.svg" v-on:click="closeNav"/>
+    </div>
+    <router-link to="/orginazation" class="link" v-on:click="closeNav">組織架構</router-link>
+    <router-link to="/service" class="link" v-on:click="closeNav">服務介紹</router-link>
+    <router-link to="/environment" class="link" v-on:click="closeNav">環境介紹</router-link>
+    <router-link to="/activities" class="link" v-on:click="closeNav">活動花絮</router-link>
+  </div>
+  <router-view  v-on:click="closeNav"/>
+   <div class="footer" v-on:click="closeNav">
       <div class="contact">
         <div class="contact_content">
           <div class="left">
@@ -196,7 +198,9 @@ export default {
 }
 .links_md{
   display: none;
-  margin-right: 32px;
+  position: absolute;
+  right: 32px;
+  top: 24px;
 }
 @media screen and (max-width: 1440px) {
   .navbar .picture{

@@ -1,4 +1,19 @@
 <template>
+  <div v-for="(item,index) in introduction" :key="item">
+    <div class="service_top" v-if="index==nowPic">
+      <!-- <div class="left" style="background-image: url('./../activity/activity_birthday.png');"> -->
+      <div class="left">
+        <img class="picture" v-bind:src="require('./../assets/activity/' + item.picture + '.png')" />
+      </div>
+      <div class="right">
+        <div></div>
+        <p class="title">{{item.title}}</p>
+        <div class="dots">
+          <span class="dot" v-for="(item,index) in introduction" :key="item" v-on:click="selectPic(index)" v-bind:class="[nowPic==index?'selected':'unselected']"></span>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="client">
     <div class="client_top">
       <div class="topic_title">服務對象</div>
@@ -43,14 +58,23 @@
 
 <script>
 import dataset from '../assets/data.json'
+const introduction = dataset.activities
 const client = dataset.client
 const charges = dataset.charges
+const nowPic = 0
 export default {
   name: 'service',
   data () {
     return {
       client: client,
-      charges: charges
+      charges: charges,
+      introduction: introduction,
+      nowPic: nowPic
+    }
+  },
+  methods: {
+    selectPic: function (index) {
+      this.nowPic = index
     }
   },
   props: {
@@ -79,6 +103,52 @@ export default {
   width: 58px;
   background-color: #29471c;
 }
+.service_top {
+  width: 100%;
+  /* height: 524px; */
+  display: flex;
+}
+.service_top .left {
+  width: 50%;
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  /* background-color: #eee; */
+}
+.service_top .left .picture {
+  height: 100%;
+  width: 100%;
+}
+.service_top .right {
+  width: 50%;
+  background-color: #f0fcea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px 0px;
+}
+.service_top .right .title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #2C2C2C;
+}
+.service_top .right .dots {
+  display: flex;
+  column-gap: 12px;
+}
+.service_top .right .dot {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+.selected {
+  background-color: #578369;
+}
+.unselected {
+  background-color: #c4c4c4;
+}
 .client {
   display: flex;
   flex-direction: column;
@@ -87,7 +157,7 @@ export default {
 }
 .client .client_top {
   width: 60%;
-  margin: 102px 50px;
+  margin: 60px 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -133,7 +203,7 @@ export default {
 }
 .charges .charges_top {
   width: 60%;
-  margin: 102px 42px;
+  margin: 60px 42px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
