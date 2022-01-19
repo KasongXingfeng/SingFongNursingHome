@@ -10,16 +10,18 @@
       <span>|</span>
       <router-link to="/activities" class="link">活動花絮</router-link>
     </div>
-    <div class="links_md" onclick="openNav()">
+    <div class="links_md" v-on:click="openNav" v-if="!sidebarOpen">
       <img src="./../assets/img/Menu.svg">
     </div>
-    <!-- <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div id="mySidenav" class="sidenav" v-if="sidebarOpen">
+      <div class="close">
+        <img src="./../assets/img/close.svg" v-on:click="closeNav"/>
+      </div>
       <router-link to="/orginazation" class="link">組織架構</router-link>
       <router-link to="/service" class="link">服務介紹</router-link>
       <router-link to="/environment" class="link">環境介紹</router-link>
       <router-link to="/activities" class="link">活動花絮</router-link>
-    </div> -->
+    </div>
   </div>
   <router-view/>
    <div class="footer">
@@ -50,7 +52,16 @@ export default {
   name: 'mainpage',
   data () {
     return {
-      data: data
+      data: data,
+      sidebarOpen: false
+    }
+  },
+  methods: {
+    openNav: function () {
+      this.sidebarOpen = true
+    },
+    closeNav: function () {
+      this.sidebarOpen = false
     }
   },
   props: {
@@ -98,20 +109,34 @@ export default {
   font-weight: 600;
   text-decoration: none;
 }
-
 .sidenav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
   height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
+  width: 250px;
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
+  right: 0;
+  background-color: rgba(43, 50, 40, 0.8);
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  padding-top: 32px;
+  transition: 0.5s;
 }
-
+.sidenav .link {
+  text-decoration: none;
+  color: #eee;
+  /* padding-bottom: 10px; */
+  /* border-bottom: solid 1px #eee; */
+  /* font-weight: 600; */
+  font-size: 20px;
+}
+.sidenav .close{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 42px;
+}
 .footer .contact {
   background-color: #CAE9BE;
   display: flex;

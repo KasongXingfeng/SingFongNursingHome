@@ -6,40 +6,48 @@
       <div class="title_line"></div>
     </div>
     <div class="activities_content">
-      <div class="card">
-        <div class="picture"></div>
-        <div class="title">23213231</div>
-        <div class="line"></div>
-      </div>
-      <div class="card">
-        <div class="picture"></div>
-        <div class="title">23213231</div>
-        <div class="line"></div>
-      </div>
-      <div class="card">
-        <div class="picture"></div>
-        <div class="title">23213231</div>
+      <div class="card" v-for="item in data.slice((nowPage - 1)*6,(nowPage - 1)*6 + 6)" :key="item">
+        <div>
+          <img class="picture" v-bind:src="require('./../assets/activity/' + item.picture + '.png')" />
+        </div>
+        <div class="title">{{item.title}}</div>
         <div class="line"></div>
       </div>
     </div>
     <div class="pagination">
-      <img style="padding-right: 28px" src="./../assets/img/Back.svg" />
-      <span class="page">1</span>
-      <span class="selected">2</span>
-      <span class="page">3</span>
-      <span class="page">4</span>
-      <img style="padding-left: 28px" src="./../assets/img/Forward.svg" />
+      <img style="padding-right: 28px" src="./../assets/img/Back.svg" v-on:click="prev"/>
+      <span class="page" v-for="(page,index) in totalPage" :key="index+1" v-bind:class="[nowPage==index+1?'selected':'unselected']" v-on:click="selectedPage(index+1)">{{index + 1}}</span>
+      <img style="padding-left: 28px" src="./../assets/img/Forward.svg" v-on:click="next"/>
     </div>
   </div>
 </template>
 <script>
 import dataset from '../assets/data.json'
-const data = dataset.objectives
+const data = dataset.activities
+const totalPage = parseInt(data.length / 6 + 1)
+const nowPage = 1
 export default {
   name: 'Activities',
   data () {
     return {
-      data: data
+      data: data,
+      totalPage: totalPage,
+      nowPage: nowPage
+    }
+  },
+  methods: {
+    selectedPage: function (index) {
+      this.nowPage = index
+    },
+    next: function () {
+      if (this.nowPage !== this.totalPage) {
+        this.nowPage = this.nowPage + 1
+      }
+    },
+    prev: function () {
+      if (this.nowPage !== 1) {
+        this.nowPage = this.nowPage - 1
+      }
     }
   },
   props: {
@@ -86,11 +94,13 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  row-gap: 24px;
 }
 .activities_content .card{
   background-color: #fff;
-  padding: 28px;
-  height: 300px;
+  width: 32%;
+  padding: 28px 0;
+  height: 320px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -100,9 +110,9 @@ export default {
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
 }
 .activities_content .card .picture{
-  width: 265px;
-  height: 200px;
-  background-color: #ddd;
+  width: 80%;
+  /* height: 200px; */
+  /* background-color: #ddd; */
 }
 .activities_content .card .title{
   font-size: 24px;
@@ -132,10 +142,12 @@ export default {
   height: 30px;
   font-size: 18px;
   line-height: 21px;
-  color: #2c2c2c;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.unselected {
+  color: #2c2c2c;
 }
 .selected {
   font-size: 18px;
