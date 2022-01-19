@@ -12,15 +12,9 @@
 </template>
 
 <script>
-import dataset from '../assets/data.json'
-const data = dataset.objectives
+
 export default {
   name: 'Orginazation',
-  data () {
-    return {
-      data: data
-    }
-  },
   props: {
     msg2: String
   }
@@ -55,7 +49,7 @@ export default {
   justify-content: center;
 }
 .structure .structure_top {
-  width: 77%;
+  width: 60%;
   margin: 102px 50px;
   display: flex;
   flex-direction: column;

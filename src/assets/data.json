@@ -19,19 +19,19 @@
 ],
 "jiasong":[
   {
-    "picture":"../assets/img/Address.svg",
+    "picture":"Address",
     "content":"台中市豐原區南陽路197號"
   },{
-    "picture":"../assets/img/Phone.svg",
+    "picture":"Phone",
     "content":"04-25294989"
   },{
-    "picture":"../assets/img/Office Phone.svg",
+    "picture":"OfficePhone",
     "content":"04-25294995"
   },{
-    "picture":"../assets/img/Mail.svg",
+    "picture":"Mail",
     "content":"goodcare568@gmail.com"
   },{
-    "picture":"../assets/img/LINE.svg",
+    "picture":"LINE",
     "content":"@653tghvd"
   }
 ],
@@ -63,81 +63,81 @@
 ],
 "charges":[
   {
-    "icon":"./../assets/img/Nurse.svg",
+    "icon":"Nurse",
     "charge":"生活照護",
     "charge_item":[
       {
         "item_name":"六人房",
-        "price":"NT 33,000/月"
+        "price":"NT 33,000 / 月"
       },
       {
         "item_name":"雙人房",
-        "price":"NT 40,000/月"
+        "price":"NT 40,000 / 月"
       }
     ]
   },
   {
-    "icon":"./../assets/img/Scuba Tank.svg",
+    "icon":"OxygenMask",
     "charge":"管路照護",
     "charge_item":[
       {
         "item_name":"鼻胃管護理",
-        "price":"NT 1,500/月"
+        "price":"NT 1,500 / 月"
       },
       {
         "item_name":"導尿管護理",
-        "price":"NT 1,500/月"
+        "price":"NT 1,500 / 月"
       },
       {
         "item_name":"氣切護理",
-        "price":"NT 3,000/月"
+        "price":"NT 3,000 / 月"
       }
     ]
   },
   {
-    "icon":"./../assets/img/Oxygen Mask.svg",
+    "icon":"ScubaTank",
     "charge":"氧氣服務",
     "charge_item":[
       {
         "item_name":"氧氣(鐵管)",
-        "price":"NT 100/hr"
+        "price":"NT 100 / hr"
       },
       {
         "item_name":"24小時氧氣機租借",
-        "price":"NT 3,000/月"
+        "price":"NT 3,000 / 月"
       }
     ]
   },{
-    "icon":"./../assets/img/Doctors Folder.svg",
+    "icon":"DoctorsFolder",
     "charge":"自行負擔",
     "charge_item":[
       {
         "item_name":"血糖監測(含耗材)",
-        "price":"NT 50/次"
+        "price":"NT 50 / 次"
       },
       {
         "item_name":"蒸氣吸入及抽痰",
-        "price":"NT 1,000/月"
+        "price":"NT 1,000 / 月"
       },
       {
         "item_name":"氣墊床",
-        "price":"NT 3,000"
+        "price":"NT 3,000 / 月"
       },
       {
         "item_name":"電費",
-        "price":"NT 500/月"
+        "price":"NT 500 / 月"
       },
       {
         "item_name":"拋棄式導管",
-        "price":"NT 100/組"
+        "price":"NT 100 / 組"
       },
       {
         "item_name":"傷口護理",
-        "price":"(小) NT 50/日"
+        "price":"(小) NT 50 / 日"
       },
       {
         "item_name":"",
-        "price":"(大) NT 100/日"
+        "price":"(大) NT 100 / 日"
       }
     ]
   }

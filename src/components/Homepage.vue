@@ -54,7 +54,7 @@
 import dataset from '../assets/data.json'
 const data = dataset.objectives
 export default {
-  name: 'HelloWorld',
+  name: 'Homepage',
   data () {
     return {
       data: data
@@ -124,7 +124,7 @@ export default {
   justify-content: center;
 }
 .all .concept .concept_top {
-  width: 77%;
+  width: 60%;
   margin: 102px 50px;
   display: flex;
   flex-direction: column;
@@ -138,7 +138,7 @@ export default {
   margin-bottom: 82px;
 }
 .all .objectives .objectives_top {
-  width: 77%;
+  width: 60%;
   margin: 102px 50px;
   display: flex;
   flex-direction: column;
@@ -165,7 +165,7 @@ export default {
   color: #2C2C2C;
 }
 .all .objectives_content {
-  width: 77%;
+  width: 60%;
 }
 .all .objectives_content .columns {
   display: flex;
@@ -206,7 +206,7 @@ export default {
   margin-bottom: 82px;
 }
 .conclusion .conclusion_content {
-  width: 67%;
+  width: 54%;
   display: flex;
   align-items: center;
   column-gap: 28px;
@@ -216,5 +216,64 @@ export default {
   font-size: 18px;
   line-height: 21px;
   color: #2C2C2C;
+}
+@media screen and (max-width: 1440px){
+  .all .concept .concept_top {
+    width: 75%;
+  }
+  .all .objectives .objectives_top {
+    width: 75%;
+    margin: 102px 50px;
+  }
+  .all .objectives_content {
+    width: 75%;
+  }
+  .conclusion .conclusion_content {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1024px){
+  .all .concept .concept_top {
+    margin: 60px 50px;
+  }
+  .all .concept .concept_content .title{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .all .concept .concept_content .subtitle{
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .all .objectives .objectives_top {
+    margin: 60px 50px;
+  }
+  .all .objectives_content .description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .conclusion .conclusion_content {
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .conclusion {
+    margin-bottom: 72px;
+  }
+  .all .objectives {
+    margin-bottom: 72px;
+  }
+  .all .objectives_content .columns {
+    display: flex;
+    justify-content: space-around;
+    row-gap: 24px;
+  }
+  .all .objectives_content .column {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px){
+  .all .objectives_content .column {
+    width: 100%;
+  }
 }
 </style>

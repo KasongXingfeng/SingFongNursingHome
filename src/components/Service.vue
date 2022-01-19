@@ -25,15 +25,15 @@
     <div class="charges_content">
       <div class="box" v-for="item in charges" :key="item">
         <div class="tag">
-          <span class="client_circle">
-            <img v-bind:src="item.icon">
+          <span class="tag_circle">
+            <img v-bind:src="require('./../assets/img/' + item.icon + '.svg')" />
           </span>
           <span class="description">{{ item.charge }}</span>
         </div>
         <div class="box_inside">
           <div class="detail" v-for="detail in item.charge_item" :key="detail">
-            <span>{{detail.item_name}}</span>
-            <span>{{detail.price}}</span>
+            <span class="detail_name">{{detail.item_name}}</span>
+            <span class="detail_price">{{detail.price}}</span>
           </div>
         </div>
       </div>
@@ -86,14 +86,14 @@ export default {
   justify-content: center;
 }
 .client .client_top {
-  width: 77%;
-  margin: 102px 42px;
+  width: 60%;
+  margin: 102px 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 .client_content {
-  width: 77%;
+  width: 60%;
 }
 .client_content .columns {
   display: flex;
@@ -132,17 +132,74 @@ export default {
   justify-content: center;
 }
 .charges .charges_top {
-  width: 77%;
+  width: 60%;
   margin: 102px 42px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 .charges_content {
-  width: 77%;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 84px;
+  row-gap: 42px;
 }
 .charges_content .box{
- border: solid 1px #ACACAC;
- border-radius: 8px;
+  height: 316px;
+  border: solid 1px #ACACAC;
+  width: 47%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
+}
+.charges_content .box .tag{
+  /* width: 220px; */
+  border-radius: 99px;
+  background-color: #CAE9BE;
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+  padding: 5px 48px 5px 5px;
+  margin-top: 24px;
+}
+.charges_content .tag_circle{
+  background-color: #ffffff;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.charges_content .description{
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 100%;
+  line-height: 21px;
+  color: #2C2C2C;
+}
+.charges_content .box_inside{
+  width: 60%;
+}
+.charges_content .box_inside .detail{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.charges_content .box_inside .detail .detail_name{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #2C2C2C;
+}
+.charges_content .box_inside .detail .detail_price{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: #805800;
 }
 </style>
