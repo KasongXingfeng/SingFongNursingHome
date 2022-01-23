@@ -3,7 +3,7 @@
     <div class="service_top" v-if="index==nowPic">
       <!-- <div class="left" style="background-image: url('./../activity/activity_birthday.png');"> -->
       <div class="left">
-        <img class="picture" v-bind:src="require('./../assets/activity/' + item.picture + '.png')" />
+        <img class="picture" v-bind:src="require('./../assets/service/' + item.picture + '.png')" />
       </div>
       <div class="right">
         <div></div>
@@ -58,7 +58,7 @@
 
 <script>
 import dataset from '../assets/data.json'
-const introduction = dataset.activities
+const introduction = dataset.services
 const client = dataset.client
 const charges = dataset.charges
 const nowPic = 0
@@ -110,6 +110,8 @@ export default {
 }
 .service_top .left {
   width: 50%;
+  background-color: #eee;
+  height: inherit;
   /* background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
@@ -120,13 +122,13 @@ export default {
   width: 100%;
 }
 .service_top .right {
-  width: 50%;
+  width: calc(50% - 96px);
   background-color: #f0fcea;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 48px 0px;
+  padding: 48px;
 }
 .service_top .right .title {
   font-size: 24px;
