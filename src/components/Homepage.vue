@@ -69,17 +69,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .all .cover {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 300px;
+  width: 100%;
   background-image: url('../assets/img/unsplash_VUOiQW4OeLIcover.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
 }
 .all .cover .title {
   color: #29471c;
@@ -236,20 +236,26 @@ export default {
   .all .concept .concept_top {
     margin: 60px 50px;
   }
+  .all .concept .column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .all .concept .concept_content .title{
+    margin-bottom: 35px;
     font-size: 20px;
     line-height: 24px;
   }
   .all .concept .concept_content .subtitle{
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
   }
   .all .objectives .objectives_top {
     margin: 60px 50px;
   }
   .all .objectives_content .description {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 30px;
   }
   .conclusion .conclusion_content {
     flex-direction: column;
@@ -268,12 +274,12 @@ export default {
     row-gap: 24px;
   }
   .all .objectives_content .column {
-    width: 80%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px){
-  .all .objectives_content .column {
-    width: 100%;
+  .all .objectives_content {
+    width: 90%;
   }
 }
 </style>
