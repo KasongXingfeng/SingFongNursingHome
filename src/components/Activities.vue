@@ -24,7 +24,10 @@
 <script>
 import dataset from '../assets/data.json'
 const data = dataset.activities
-const totalPage = parseInt(data.length / 6 + 1)
+let totalPage = parseInt(data.length / 6)
+if (data.length % 6 !== 0) {
+  totalPage = totalPage + 1
+}
 const nowPage = 1
 export default {
   name: 'Activities',

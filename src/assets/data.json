@@ -161,6 +161,9 @@
     "title":"休閒空間",
     "picture":"activity_fun3"
   },{
+    "title":"休閒空間",
+    "picture":"activity_other11"
+  },{
     "title":"元亨診所定期巡診",
     "picture":"activity_other1"
   },{
@@ -172,6 +175,12 @@
   },{
     "title":"衛豐牙醫巡診",
     "picture":"activity_other3"
+  },{
+    "title":"衛豐牙醫巡診",
+    "picture":"activity_other12"
+  },{
+    "title":"衛豐牙醫巡診",
+    "picture":"activity_other9"
   },{
     "title":"輪椅輔具修繕",
     "picture":"activity_other5"
@@ -185,8 +194,8 @@
     "title":"中秋烤肉",
     "picture":"activity_other8"
   },{
-    "title":"衛豐牙醫巡診",
-    "picture":"activity_other9"
+    "title":"節慶-樂團表演",
+    "picture":"activity_other10"
   }
   ],"services":[
   {
