@@ -22,7 +22,7 @@
       <div class="pic_set">
         <img src="./../assets/environment/environment_outdoor1.png" />
         <img src="./../assets/environment/environment_indoor3.png" />
-        <img src="./../assets/environment/environment_outdoor2.png" />
+        <img src="./../assets/environment/environment_outdoor3.png" />
       </div>
       <div class="content">
         <p>房舍外有步道，周圍有種植花草，供住民平時活動、日光浴，慢活樂趣。</p>
@@ -49,8 +49,8 @@
         </div>
         <div class="indoor_column" style="flex-direction: row-reverse;">
           <div class="indoor_pic_set">
-            <img src="./../assets/environment/environment_119.png" />
-            <img src="./../assets/environment/environment_119.png" />
+            <img src="./../assets/environment/environment_119_1.png" />
+            <img src="./../assets/environment/environment_119_2.png" />
           </div>
           <div class="indoor_text">
             <div class="title">消防疏散避難系統</div>
@@ -117,6 +117,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #eee;
 }
 .all .right {
   width: 50%;
