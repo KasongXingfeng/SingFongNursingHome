@@ -199,12 +199,12 @@ export default {
 .links_md{
   display: none;
   position: absolute;
-  right: 32px;
+  right: 20px;
   top: 24px;
 }
 @media screen and (max-width: 1440px) {
   .navbar .picture{
-  width: 300px;
+    width: 60%;
   }
 }
 @media screen and (max-width: 1024px) {
