@@ -1,19 +1,21 @@
 <template>
-  <div v-for="(item,index) in introduction" :key="item">
-    <div class="service_top" v-if="index==nowPic">
-      <!-- <div class="left" style="background-image: url('./../activity/activity_birthday.png');"> -->
-      <div class="left">
-        <img class="picture" v-bind:src="require('./../assets/service/' + item.picture + '.png')" />
-      </div>
-      <div class="right">
-        <div></div>
-        <p class="title">{{item.title}}</p>
-        <div class="dots">
-          <span class="dot" v-for="(item,index) in introduction" :key="item" v-on:click="selectPic(index)" v-bind:class="[nowPic==index?'selected':'unselected']"></span>
+  <section class="wrapper">
+    <div v-for="(item,index) in introduction" :key="item">
+      <div class="service_top" v-if="index==nowPic">
+        <!-- <div class="left" style="background-image: url('./../activity/activity_birthday.png');"> -->
+        <div class="left">
+          <img class="picture" v-bind:src="require('./../assets/service/' + item.picture + '.png')" style='height:50%'/>
+        </div>
+        <div class="right">
+          <div></div>
+          <p class="title">{{item.title}}</p>
+          <div class="dots">
+            <span class="dot" v-for="(item,index) in introduction" :key="item" v-on:click="selectPic(index)" v-bind:class="[nowPic==index?'selected':'unselected']"></span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <div class="client">
     <div class="client_top">
       <div class="topic_title">服務對象</div>
@@ -84,6 +86,51 @@ export default {
 
 </script>
 <style scoped>
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+.wrapper .service_top {
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+.wrapper .service_top .left {
+  width: 50%;
+  height: inherit;
+  background-color: #eee;
+}
+.wrapper .service_top .left .picture {
+  width: 100%;
+}
+.wrapper .service_top .right {
+  width: 50%;
+  height: auto;
+  background-color: #f0fcea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.wrapper .service_top .right .title {
+  font-size: 25px;
+  line-height: 28px;
+  color: #2C2C2C;
+}
+.wrapper .service_top .right .dots {
+  display: flex;
+  column-gap: 12px;
+}
+.wrapper .service_top .right .dot {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
 .topic_title {
   font-size: 32px;
   font-weight: bold;
@@ -102,48 +149,6 @@ export default {
   height: 2px;
   width: 58px;
   background-color: #29471c;
-}
-.service_top {
-  width: 100%;
-  /* height: 524px; */
-  display: flex;
-}
-.service_top .left {
-  width: 50%;
-  background-color: #eee;
-  height: inherit;
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-  /* background-color: #eee; */
-}
-.service_top .left .picture {
-  height: 100%;
-  width: 100%;
-}
-.service_top .right {
-  width: calc(50% - 96px);
-  background-color: #f0fcea;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 48px;
-}
-.service_top .right .title {
-  font-size: 24px;
-  line-height: 28px;
-  color: #2C2C2C;
-}
-.service_top .right .dots {
-  display: flex;
-  column-gap: 12px;
-}
-.service_top .right .dot {
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  cursor: pointer;
 }
 .selected {
   background-color: #578369;
@@ -273,5 +278,10 @@ export default {
   font-size: 18px;
   line-height: 100%;
   color: #805800;
+}
+@media only screen and (max-width: 1024px) {
+  .wrapper .service_top .right .title {
+    font-size: 12px;
+  }
 }
 </style>

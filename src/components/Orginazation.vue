@@ -1,14 +1,14 @@
 <template>
   <div class="structure">
-  <div class="structure_top">
-    <div class="topic_title">組織圖</div>
-    <div class="topic_eng">Organization Structure</div>
-    <div class="title_line"></div>
+    <div class="structure_top">
+      <div class="topic_title">組織圖</div>
+      <div class="topic_eng">Organization Structure</div>
+      <div class="title_line"></div>
+    </div>
+    <div>
+      <img class="structure_pic" src="../assets/img/Group4.svg">
+    </div>
   </div>
-  <div>
-    <img class="structure_pic" src="../assets/img/Group4.svg">
-  </div>
-</div>
 </template>
 
 <script>
@@ -49,13 +49,14 @@ export default {
   justify-content: center;
 }
 .structure .structure_top {
-  width: 60%;
+  width: 80%;
   margin: 102px 50px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 .structure_pic {
   margin-bottom: 84px;
+  width: 90%;
 }
 </style>
