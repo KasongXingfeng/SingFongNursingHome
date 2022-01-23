@@ -4,7 +4,7 @@
       <div class="service_top" v-if="index==nowPic">
         <!-- <div class="left" style="background-image: url('./../activity/activity_birthday.png');"> -->
         <div class="left">
-          <img class="picture" v-bind:src="require('./../assets/service/' + item.picture + '.png')" style='height:50%'/>
+          <img class="picture" v-bind:src="require('./../assets/service/' + item.picture + '.png')" style='height:80%'/>
         </div>
         <div class="right">
           <div></div>
