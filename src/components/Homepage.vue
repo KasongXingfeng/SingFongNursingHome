@@ -275,11 +275,24 @@ export default {
   }
   .all .objectives_content .column {
     width: 100%;
+    column-gap: 8px;
   }
 }
 @media screen and (max-width: 768px){
   .all .objectives_content {
     width: 90%;
+  }
+  .all .objectives_content .index_circle {
+    width: 30px;
+    height: 30px;
+  }
+  .all .objectives_content .index_circle {
+    width: 30px;
+    height: 30px;
+  }
+  .all .objectives_content .index {
+    line-height: 30px;
+    font-size: 18px
   }
 }
 </style>

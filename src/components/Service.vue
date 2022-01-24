@@ -279,9 +279,57 @@ export default {
   line-height: 100%;
   color: #805800;
 }
+@media only screen and (max-width: 1440px) {
+  .client .client_top {
+      width: 75%;
+  }
+  .client_content {
+    width: 75%;
+  }
+  .charges .charges_top {
+    width: 75%;
+  }
+  .charges_content {
+    width: 75%;
+  }
+  .charges_content .box_inside{
+    width: 75%;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .wrapper .service_top .right .title {
     font-size: 12px;
   }
+  .client_content .columns {
+    flex-direction: column;
+  }
+  .client_content .column {
+    width: auto;
+  }
+  .charges_content {
+    flex-direction: column;
+    margin-bottom: 48px;
+  }
+  .charges_content .box {
+    width: auto;
+    height: auto;
+  }
+  .charges_content .box_inside .detail .detail_name {
+    font-size: 16px;
+  }
+  .charges_content .box_inside .detail .detail_price {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* .wrapper .service_top {
+    flex-direction: column;
+  }
+  .wrapper .service_top .left {
+    width: 100%;
+  }
+  .wrapper .service_top .right {
+    width: 100%;
+  } */
 }
 </style>

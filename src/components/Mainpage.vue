@@ -214,5 +214,13 @@ export default {
   .links_md{
     display: block;
   }
+  .footer .left {
+    border-right: 2px solid #578369;
+    padding-right: 12px;
+    margin-right: 12px;
+  }
+  .footer .right .column {
+    column-gap: 4px;
+  }
 }
 </style>
