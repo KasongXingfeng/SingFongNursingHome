@@ -102,19 +102,19 @@ export default {
 .activities_content .card{
   background-color: #fff;
   width: 32%;
-  padding: 28px 0;
-  height: 320px;
+  padding: 18px 0;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  row-gap: 24px;
+  /* row-gap: 2px; */
   border: solid 1px #eee;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
 }
 .activities_content .card .picture{
-  width: 80%;
-  /* height: 200px; */
+  width: 90%;
+  height: 90%;
   /* background-color: #ddd; */
 }
 .activities_content .card .title{
@@ -162,5 +162,25 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 1024px) {
+  .activities_content .card{
+    width: 50%;
+  }
+  .activities_content .card .picture{
+    width: 100%;
+    height: 100%;
+    /* background-color: #ddd; */
+  }
+}
+@media only screen and (max-width: 480px) {
+  .activities_content .card{
+    width: 100%;
+  }
+  .activities_content .card .picture{
+    width: 100%;
+    height: 100%;
+    /* background-color: #ddd; */
+  }
 }
 </style>

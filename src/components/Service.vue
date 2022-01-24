@@ -4,7 +4,7 @@
       <div class="service_top" v-if="index==nowPic">
         <!-- <div class="left" style="background-image: url('./../activity/activity_birthday.png');"> -->
         <div class="left">
-          <img class="picture" v-bind:src="require('./../assets/service/' + item.picture + '.png')" style='height:80%'/>
+          <img class="picture" v-bind:src="require('./../assets/service/' + item.picture + '.png')" />
         </div>
         <div class="right">
           <div></div>
@@ -90,20 +90,20 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 50%;
+  /* height: 1000px; */
   width: 100%;
 }
 .wrapper .service_top {
   width: 100%;
-  height: 50%;
   display: flex;
 }
 .wrapper .service_top .left {
   width: 50%;
-  height: inherit;
+  height: 100%;
   background-color: #eee;
 }
 .wrapper .service_top .left .picture {
+  height: auto;
   width: 100%;
 }
 .wrapper .service_top .right {

@@ -47,7 +47,7 @@
             <p>走廊光明清幽、中庭擺設電視，提供住民休閒娛樂。</p>
           </div>
         </div>
-        <div class="indoor_column" style="flex-direction: row-reverse;">
+        <div class="indoor_column">
           <div class="indoor_pic_set">
             <img src="./../assets/environment/environment_119_1.png" />
             <img src="./../assets/environment/environment_119_2.png" />
@@ -107,12 +107,14 @@ export default {
 </script>
 <style scoped>
 .all .top {
+  margin-top: 5px;
   display: flex;
   width: 100%;
+  height: 480px;
 }
 .all .left {
   width: 50%;
-  height: 480px;
+  height: 100%;
   background-image: url('../assets/environment/environment_door2.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -121,6 +123,7 @@ export default {
 }
 .all .right {
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,10 +168,10 @@ export default {
   padding-bottom: 58px;
 }
 .area {
-  width: 60%;
+  width: 80%;
 }
 .tag{
-  width: 200px;
+  width: 300px;
   border-radius: 99px;
   background-color: #CAE9BE;
   display: flex;
@@ -237,21 +240,68 @@ export default {
   display: flex;
 }
 .indoor_column .indoor_text {
-  width: 35%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   row-gap: 16px;
-  padding: 0 2%;
+  padding: 5px 2%;
 }
-.indoor_column .indoor_text p{
-  /* width: 300px; */
+.indoor_column .indoor_text p {
+  font-size: 20px;
 }
 .indoor_column .indoor_pic_set {
-  width: 65%;
+  width: 75%;
 }
 .indoor_column .indoor_pic_set img{
   width: 50%;
+}
+@media only screen and (max-width: 480px) {
+  .area {
+    width: 100%;
+  }
+  .all .top {
+    height: 240px;
+  }
+  .topic_title {
+    font-size: 26px;
+  }
+  .topic_eng {
+    font-size: 18px;
+  }
+  .all .right .right_inside p {
+    font-size: 14px;
+  }
+  .tag {
+    width: 100%;
+  }
+  .pic_set{
+    flex-direction: column;
+  }
+  .pic_set img {
+    width: 100%;
+    padding: 10px;
+  }
+  .indoor_column {
+    align-items: center;
+    flex-direction: column;
+  }
+  .indoor_column .indoor_text {
+    margin-top: 10px;
+  }
+  .indoor_column .indoor_pic_set {
+    width: 85%;
+  }
+  .indoor_column .indoor_pic_set img{
+    width: 50%;
+  }
+  .line {
+    width: 50%;
+    background-color: #29471c;
+  }
+  .area .content p {
+    letter-spacing: 3px;
+  }
 }
 </style>
