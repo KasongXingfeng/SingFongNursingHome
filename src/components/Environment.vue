@@ -8,7 +8,7 @@
           <div class="topic_title">環境介紹</div>
           <div class="topic_eng">Service</div>
           <div class="title_line"></div>
-          <p>佳松位於南陽路鄰近豐原大道，交通便利，有廣大的前庭位置，停車方便。</p>
+          <p>位於南陽路鄰近豐原大道，交通便利，有廣大的前庭位置，停車方便。</p>
         </div>
       </div>
     </div>
@@ -20,12 +20,12 @@
         <span class="description">戶外休閒區</span>
       </div>
       <div class="pic_set">
-        <img src="./../assets/environment/environment_outdoor1.png" />
-        <img src="./../assets/environment/environment_indoor3.png" />
-        <img src="./../assets/environment/environment_outdoor3.png" />
+        <img src="./../assets/environment/environment_outdoor1.jpg" />
+        <img src="./../assets/environment/environment_indoor3.jpg" />
+        <img src="./../assets/environment/environment_outdoor3.jpg" />
       </div>
       <div class="content">
-        <p>房舍外有步道，周圍有種植花草，供住民平時活動、日光浴，慢活樂趣。</p>
+        <p style="text-align: justify;">房舍外有步道，周圍有種植花草，供住民平時活動、日光浴，慢活樂趣。</p>
       </div>
     </div>
     <div class="area">
@@ -38,8 +38,8 @@
       <div class="indoor_content">
         <div class="indoor_column">
           <div class="indoor_pic_set">
-            <img src="./../assets/environment/environment_indoor2.png" />
-            <img src="./../assets/environment/environment_indoor10.png" />
+            <img src="./../assets/environment/environment_indoor2.jpg" />
+            <img src="./../assets/environment/environment_indoor10.jpg" />
           </div>
           <div class="indoor_text">
             <div class="title">休閒交誼廳</div>
@@ -49,8 +49,8 @@
         </div>
         <div class="indoor_column">
           <div class="indoor_pic_set">
-            <img src="./../assets/environment/environment_119_1.png" />
-            <img src="./../assets/environment/environment_119_2.png" />
+            <img src="./../assets/environment/environment_119_1.jpg" />
+            <img src="./../assets/environment/environment_119_2.jpg" />
           </div>
           <div class="indoor_text">
             <div class="title">消防疏散避難系統</div>
@@ -60,8 +60,8 @@
         </div>
         <div class="indoor_column">
           <div class="indoor_pic_set">
-            <img src="./../assets/environment/environment_bathroom2.png" />
-            <img src="./../assets/environment/environment_bathroom1.png" />
+            <img src="./../assets/environment/environment_bathroom2.jpg" />
+            <img src="./../assets/environment/environment_bathroom1.jpg" />
           </div>
           <div class="indoor_text">
             <div class="title">護理服務設施－盥洗區</div>
@@ -79,12 +79,12 @@
         <span class="description">寢室環境</span>
       </div>
       <div class="pic_set">
-        <img src="./../assets/environment/environment_indoor9.png" />
-        <img src="./../assets/environment/environment_indoor7.png" />
-        <img src="./../assets/environment/environment_bed.png" />
+        <img src="./../assets/environment/environment_indoor9.jpg" />
+        <img src="./../assets/environment/environment_indoor7.jpg" />
+        <img src="./../assets/environment/environment_bed.jpg" />
       </div>
       <div class="content">
-        <p>寢室格局有雙人房、六人房，皆有獨立廁所、冷氣，配備床、床旁桌、頭燈、圍簾，以及個人獨立衣櫥，收納空間相當充足。</p>
+        <p style="text-align: justify;">寢室格局有雙人房、六人房，皆有獨立廁所、冷氣，配備床、床旁桌、頭燈、圍簾，以及個人獨立衣櫥，收納空間相當充足。</p>
       </div>
     </div>
   </div>
@@ -115,10 +115,10 @@ export default {
 .all .left {
   width: 50%;
   height: 100%;
-  background-image: url('../assets/environment/environment_door2.png');
+  background-image: url('../assets/environment/environment_door2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 0 -10px;
   background-color: #eee;
 }
 .all .right {
@@ -249,7 +249,7 @@ export default {
   padding: 5px 2%;
 }
 .indoor_column .indoor_text p {
-  font-size: 20px;
+  font-size: 18px;
 }
 .indoor_column .indoor_pic_set {
   width: 75%;
@@ -257,30 +257,47 @@ export default {
 .indoor_column .indoor_pic_set img{
   width: 50%;
 }
+@media screen and (max-width: 768px) {
+  .all .top {
+    flex-direction: column;
+    height: 500px;
+  }
+  .all .left {
+    width: 100%;
+  }
+  .all .right {
+    width: 100%;
+  }
+  .all .right .right_inside {
+    margin-top: 24px;
+  }
+  .content {
+    margin: 24px 20px 0px 20px;
+  }
+}
 @media only screen and (max-width: 480px) {
   .area {
     width: 100%;
   }
-  .all .top {
-    height: 240px;
-  }
   .topic_title {
-    font-size: 26px;
+    font-size: 30px;
   }
   .topic_eng {
-    font-size: 18px;
+    font-size: 20px;
   }
   .all .right .right_inside p {
-    font-size: 14px;
+    font-size: 16px;
+    margin-top: 12px;
   }
   .tag {
-    width: 100%;
+    width: 90%;
+    margin: 20px auto 12px auto;
   }
   .pic_set{
     flex-direction: column;
   }
   .pic_set img {
-    width: 100%;
+    width: 80%;
     padding: 10px;
   }
   .indoor_column {
@@ -301,7 +318,17 @@ export default {
     background-color: #29471c;
   }
   .area .content p {
-    letter-spacing: 3px;
+    font-size: 16px;
+  }
+  .indoor_column .indoor_text p {
+    font-size: 16px;
+  }
+  .content {
+    margin: 16px 12px 0px 12px;
+    padding: 24px 20px;
+  }
+  .title {
+    font-size: 20px;
   }
 }
 </style>

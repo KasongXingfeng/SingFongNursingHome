@@ -1,6 +1,6 @@
 <template>
   <div class="navbar" v-on:click="closeNav">
-    <router-link to="/homepage">
+    <router-link to="/" style="display: flex; justify-content: flex-start;">
       <img class="picture" src="./../assets/image2.png">
     </router-link>
     <div class="links">
@@ -32,24 +32,24 @@
           <div class="left">
             <div class="contact_title">與我們聯絡</div>
             <div class="contact_subtitle">Contact Us</div>
-            <img src="./../assets/line.png">
+            <img src="./../assets/line.png" style="height:95px">
           </div>
           <div class="right" >
             <div v-for="item in data" :key="item" class="column">
               <span>
-                <img v-bind:src="require('./../assets/img/' + item.picture + '.svg')" />
+                <img v-bind:src="require('./../assets/img/' + item.picture + '.png')" style="height:20px"/>
               </span>
               <span class="content">{{item.content}}</span>
             </div>
           </div>
         </div>
       </div>
-      <div class="privacy"> © 2022 青松健康事業. All Rights Reserved.</div>
+      <div class="privacy"> © 2022 杏豐護理之家. All Rights Reserved.</div>
     </div>
 </template>
 <script>
 import dataset from './../assets/data.json'
-const data = dataset.jiasong
+const data = dataset.singfong
 export default {
   name: 'mainpage',
   data () {
@@ -73,7 +73,7 @@ export default {
 </script>
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, Noto Serif TC;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -93,21 +93,23 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #cae9be;
+  background-color: #479EE5;
 }
 .navbar .picture {
-  margin: 22px 32px;
+  /*height: 104px;*/
+  width: 50px;
+  margin: 22px 6%;
 }
 .navbar .links{
   display: flex;
   column-gap: 24px;
   font-size: 24px;
   line-height: 28px;
-  color: #2C2C2C;
+  color: #FFFFFF;
   margin-right: 32px;
 }
 .navbar .links .link{
-  color: #2C2C2C;
+  color: #FFFFFF;
   font-weight: 600;
   text-decoration: none;
 }
@@ -140,7 +142,7 @@ export default {
   padding-right: 42px;
 }
 .footer .contact {
-  background-color: #CAE9BE;
+  background-color: #A5D8FF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,7 +157,7 @@ export default {
   flex-direction: column;
   align-items: flex-end;
   row-gap: 12px;
-  border-right: 4px solid #578369;
+  border-right: 4px solid #2F6098;
   padding-right: 24px;
   margin-right: 24px;
 }
@@ -163,13 +165,13 @@ export default {
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
-  color: #805800;
+  color: #666464;
 }
 .footer .contact .left .contact_title {
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
-  color: #29471C;
+  color: #2F6098;
 }
 .footer .right {
   display: flex;
@@ -183,13 +185,13 @@ export default {
   justify-content: flex-start;
 }
 .footer .right .column .content{
-  color: #29471C;
+  color: #2F6098;
   font-size: 12px;
   line-height: 14px;
   font-weight: bold;
 }
 .footer .privacy {
-  background-color: #578369;
+  background-color: #2F6098;
   font-size: 12px;
   line-height: 14px;
   text-align: center;

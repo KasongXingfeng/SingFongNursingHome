@@ -17,22 +17,19 @@
   "objective":"提供24小時完善專業照顧，使住民健康獲得保障。"
 }
 ],
-"jiasong":[
+"singfong":[
   {
     "picture":"Address",
-    "content":"台中市豐原區南陽路197號"
+    "content":"台中市豐原區中興路171號(衛生局斜對面)"
   },{
     "picture":"Phone",
-    "content":"04-25294989"
-  },{
-    "picture":"OfficePhone",
-    "content":"04-25294995"
+    "content":"04-25294989 徐院長"
   },{
     "picture":"Mail",
-    "content":"goodcare568@gmail.com"
+    "content":"xingfeng17733014@gmail.com"
   },{
     "picture":"LINE",
-    "content":"@653tghvd"
+    "content":"@666tjlcf"
   }
 ],
 "client":[
@@ -143,59 +140,29 @@
   }
 ],"activities":[
   {
+    "title":"樂團表演",
+    "picture":"activity_band1"
+  },{
+    "title":"樂團表演",
+    "picture":"activity_band2"
+  },{
+    "title":"慈善團體表演",
+    "picture":"activity_dance1"
+  },{
+    "title":"慈善團體表演",
+    "picture":"activity_dance2"
+  },{
     "title":"慶生會",
-    "picture":"activity_birthday"
+    "picture":"activity_birthday1"
   },{
-    "title":"聖誕節活動",
-    "picture":"activity_christmas1"
-  },{
-    "title":"聖誕節活動",
-    "picture":"activity_christmas2"
-  },{
-    "title":"餐廳用餐",
-    "picture":"activity_fun1"
-  },{
-    "title":"唱卡拉OK",
-    "picture":"activity_fun2"
-  },{
-    "title":"休閒空間",
-    "picture":"activity_fun3"
-  },{
-    "title":"休閒空間",
-    "picture":"activity_other11"
-  },{
-    "title":"元亨診所定期巡診",
-    "picture":"activity_other1"
-  },{
-    "title":"元亨診所定期巡診",
-    "picture":"activity_other2"
-  },{
-    "title":"元亨診所定期巡診",
-    "picture":"activity_other4"
-  },{
-    "title":"衛豐牙醫巡診",
-    "picture":"activity_other3"
-  },{
-    "title":"衛豐牙醫巡診",
-    "picture":"activity_other12"
-  },{
-    "title":"衛豐牙醫巡診",
-    "picture":"activity_other9"
-  },{
-    "title":"輪椅輔具修繕",
-    "picture":"activity_other5"
-  },{
-    "title":"輪椅輔具修繕",
-    "picture":"activity_other6"
+    "title":"慶生會",
+    "picture":"activity_birthday2"
   },{
     "title":"中元普渡",
-    "picture":"activity_other7"
+    "picture":"activity_festival1"
   },{
-    "title":"中秋烤肉",
-    "picture":"activity_other8"
-  },{
-    "title":"節慶-樂團表演",
-    "picture":"activity_other10"
+    "title":"中元普渡",
+    "picture":"activity_festival2"
   }
   ],"services":[
   {

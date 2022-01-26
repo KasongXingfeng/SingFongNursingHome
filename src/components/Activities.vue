@@ -8,7 +8,7 @@
     <div class="activities_content">
       <div class="card" v-for="item in data.slice((nowPage - 1)*6,(nowPage - 1)*6 + 6)" :key="item">
         <div>
-          <img class="picture" v-bind:src="require('./../assets/activity/' + item.picture + '.png')" />
+          <img class="picture" v-bind:src="require('./../assets/activity/' + item.picture + '.jpg')" />
         </div>
         <div class="title">{{item.title}}</div>
         <div class="line"></div>
@@ -163,24 +163,40 @@ export default {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 1440px) {
+.activities .activities_top {
+    width: 80%;
+  }
+  .activities_content {
+    width: 80%;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .activities_content .card{
-    width: 50%;
+    width: 46%;
+    height: 340px;
   }
   .activities_content .card .picture{
-    width: 100%;
+    width: 92%;
     height: 100%;
     /* background-color: #ddd; */
   }
 }
 @media only screen and (max-width: 480px) {
+  .activities .activities_top {
+    /* margin: ; */
+  }
   .activities_content .card{
     width: 100%;
   }
-  .activities_content .card .picture{
-    width: 100%;
-    height: 100%;
-    /* background-color: #ddd; */
+  .topic_title {
+    font-size: 30px;
+  }
+  .topic_eng {
+    font-size: 20px;
+  }
+  .activities_content .card .title {
+    font-size: 20px;
   }
 }
 </style>
