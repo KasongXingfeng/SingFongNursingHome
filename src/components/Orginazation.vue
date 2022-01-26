@@ -6,7 +6,7 @@
       <div class="title_line"></div>
     </div>
     <div>
-      <img class="structure_pic" src="../assets/img/Group4.svg">
+      <img class="structure_pic" src="../assets/img/Group15.png">
     </div>
   </div>
 </template>
@@ -27,20 +27,20 @@ export default {
   font-size: 32px;
   font-weight: bold;
   line-height: 37px;
-  color: #29471c;
+  color: #2F6098;
   margin-bottom: 4px;
 }
 .topic_eng {
   font-size: 24px;
   font-weight: bold;
   line-height: 28px;
-  color: #805800;
+  color: #888888;
   margin-bottom: 10px;
 }
 .title_line{
   height: 2px;
   width: 58px;
-  background-color: #29471c;
+  background-color: #2F6098;
 }
 .structure {
   display: flex;

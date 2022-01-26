@@ -6,9 +6,9 @@
       <div class="right">
         <div class="right_inside">
           <div class="topic_title">環境介紹</div>
-          <div class="topic_eng">Service</div>
+          <div class="topic_eng">Environment</div>
           <div class="title_line"></div>
-          <p>位於南陽路鄰近豐原大道，交通便利，有廣大的前庭位置，停車方便。</p>
+          <p>本院位處都會，環境清幽，是適合休養的地方。</p>
         </div>
       </div>
     </div>
@@ -17,7 +17,7 @@
         <span class="tag_circle">
           <img src="./../assets/img/CloseUp.svg" />
         </span>
-        <span class="description">戶外休閒區</span>
+        <span class="description">休閒區域</span>
       </div>
       <div class="pic_set">
         <img src="./../assets/environment/environment_outdoor1.jpg" />

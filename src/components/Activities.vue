@@ -6,7 +6,7 @@
       <div class="title_line"></div>
     </div>
     <div class="activities_content">
-      <div class="card" v-for="item in data.slice((nowPage - 1)*6,(nowPage - 1)*6 + 6)" :key="item">
+      <div class="card" v-for="item in data.slice((nowPage - 1)*4,(nowPage - 1)*4 + 4)" :key="item">
         <div>
           <img class="picture" v-bind:src="require('./../assets/activity/' + item.picture + '.jpg')" />
         </div>
@@ -24,8 +24,8 @@
 <script>
 import dataset from '../assets/data.json'
 const data = dataset.activities
-let totalPage = parseInt(data.length / 6)
-if (data.length % 6 !== 0) {
+let totalPage = parseInt(data.length / 4)
+if (data.length % 4 !== 0) {
   totalPage = totalPage + 1
 }
 const nowPage = 1
@@ -64,20 +64,20 @@ export default {
   font-size: 32px;
   font-weight: bold;
   line-height: 37px;
-  color: #29471c;
+  color: #479EE5;
   margin-bottom: 4px;
 }
 .topic_eng {
   font-size: 24px;
   font-weight: bold;
   line-height: 28px;
-  color: #805800;
+  color: #888888;
   margin-bottom: 10px;
 }
 .title_line{
   height: 2px;
   width: 58px;
-  background-color: #29471c;
+  background-color: #479EE5;
 }
 .activities {
   display: flex;
@@ -101,9 +101,9 @@ export default {
 }
 .activities_content .card{
   background-color: #fff;
-  width: 32%;
+  width: 48%;
   padding: 18px 0;
-  height: 400px;
+  height: 430px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -125,11 +125,11 @@ export default {
 .activities_content .card .line{
   width: 90px;
   height: 1px;
-  background-color: #29471C;
+  background-color: #479EE5;
 }
 .pagination{
   background-color: #fff;
-  border: 2px solid #CAE9BE;
+  border: 2px solid #A5D8FF;
   box-sizing: border-box;
   border-radius: 99px;
   padding: 18px;
@@ -155,7 +155,7 @@ export default {
 .selected {
   font-size: 18px;
   color: #ffffff;
-  background-color: #578369;
+  background-color: #479EE5;
   border-radius: 50%;
   width: 30px;
   height: 30px;

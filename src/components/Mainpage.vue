@@ -123,7 +123,7 @@ export default {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   right: 0;
-  background-color: rgba(43, 50, 40, 0.8);
+  background-color: rgba(16, 35, 51, 0.8);
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 32px;
   transition: 0.5s;
