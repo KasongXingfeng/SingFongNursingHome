@@ -1,4 +1,11 @@
 <template>
+<div class="service">
+  <div class="service_bar">
+    <div class="topic_title">專業及醫療服務</div>
+    <div class="topic_eng">Professional and Medical Service</div>
+    <div class="title_line"></div>
+  </div>
+</div>
   <section>
     <div v-for="(item,index) in introduction" :key="item">
       <div class="service_top" v-if="index==nowPic">
@@ -99,6 +106,14 @@ export default {
 
 </script>
 <style scoped>
+.service{
+  width: 100%;
+  height: 248px;
+}
+.service .service_bar{
+  text-align: left;
+  border-top: 10%;
+}
 .service_top {
   width: 100%;
   display: flex;
@@ -141,20 +156,20 @@ export default {
   font-size: 32px;
   font-weight: bold;
   line-height: 37px;
-  color: #29471c;
+  color: #2F6098;
   margin-bottom: 4px;
 }
 .topic_eng {
   font-size: 24px;
   font-weight: bold;
   line-height: 28px;
-  color: #805800;
+  color: #888888;
   margin-bottom: 10px;
 }
 .title_line{
   height: 2px;
   width: 58px;
-  background-color: #29471c;
+  background-color: #2F6098;
 }
 .selected {
   background-color: #578369;
@@ -181,13 +196,15 @@ export default {
 .client_content .columns {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
   row-gap: 24px;
 }
 .client_content .column {
   width: 47%;
   border-radius: 99px;
-  background-color: #CAE9BE;
+  background-color: #A5D8FF;
   display: flex;
   align-items: center;
   column-gap: 12px;

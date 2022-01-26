@@ -1,9 +1,9 @@
 <template>
   <div class = "all">
     <div class="cover">
-      <div class="title">關於佳松</div>
+      <div class="title">關於杏豐</div>
       <div class="line"></div>
-      <div class="subtitle">專業化、人性化，有尊嚴的關懷與照顧。</div>
+      <div class="subtitle">專業用心，照護溫馨</div>
     </div>
     <div class="concept">
       <div class="concept_top">
@@ -12,14 +12,7 @@
         <div class="title_line"></div>
       </div>
       <div class="concept_content">
-        <div class="column">
-          <span class="title">全心</span>
-          <span class="subtitle">愛心、耐心、貼心、安心、放心。</span>
-        </div>
-        <div class="column">
-          <span class="title">全意</span>
-          <span class="subtitle">讓顧客滿意、員工得意、全體如意。</span>
-        </div>
+        <p> 於民國94年立案,本院位處都會是一般型態的護理之家,秉持多元化的照護理念,環境清幽,是適合休養的地方，工作人員24小時親切的服務,讓每位住民都有家的感覺,備受尊重,像一家人一般,歡迎蒞臨參觀。</p>
       </div>
     </div>
     <div class="objectives">
@@ -44,7 +37,7 @@
         <div>
           <img src="./../assets/img/carbon_airline-passenger-care.svg">
         </div>
-        <p>每位需要被照顧服務者都是我們心中的寶貝，即使身體失能了、記憶力衰退了，還是值得被好好的照顧與關懷，佳松護理之家秉持用心照護，讓家屬安心托護，一起為被照顧服務者提供完善的生活品質！</p>
+        <p>當您的家人需要照顧時，在這裡我們用愛心與關心，讓您放寬心。</p>
       </div>
     </div>
   </div>
@@ -80,21 +73,22 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  padding-bottom: 198px;
 }
 .all .cover .title {
-  color: #29471c;
+  color: #2F6098;
   font-size: 48px;
   line-height: 56px;
   font-weight: bold;
 }
 .all .cover .line {
-  background-color: #29471c;
+  background-color: #2F6098;
   height: 2px;
   width: 58px;
   margin: 12px 0 20px;
 }
 .all .cover .subtitle {
-  color: #2c2c2c;
+  color: #2F6098;
   font-size: 18px;
   line-height: 21px;
 }
@@ -102,20 +96,20 @@ export default {
   font-size: 32px;
   font-weight: bold;
   line-height: 37px;
-  color: #29471c;
+  color: #2F6098;
   margin-bottom: 4px;
 }
 .topic_eng {
   font-size: 24px;
   font-weight: bold;
   line-height: 28px;
-  color: #805800;
+  color: #888888;
   margin-bottom: 10px;
 }
 .title_line{
   height: 2px;
   width: 58px;
-  background-color: #29471c;
+  background-color: #2F6098;
 }
 .all .concept {
   display: flex;
@@ -150,7 +144,7 @@ export default {
   column-gap: 38px;
   margin-bottom: 24px;
 }
-.all .concept .concept_content .title{
+/*.all .concept .concept_content .title{
   padding: 12px 56px;
   border: solid 2px #cae9be;
   border-radius: 99px;
@@ -163,6 +157,13 @@ export default {
   font-size: 18px;
   line-height: 21px;
   color: #2C2C2C;
+}*/
+.all .concept .concept_content{
+  font-size: 18px;
+  line-height: 21px;
+  color: #2C2C2C;
+  width: 60%;
+  text-align :left;
 }
 .all .objectives_content {
   width: 60%;
@@ -170,13 +171,15 @@ export default {
 .all .objectives_content .columns {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
+  flex-direction: column;
+  align-items: center;
   row-gap: 24px;
 }
 .all .objectives_content .column {
-  width: 47%;
+  width: 325px;
   border-radius: 99px;
-  background-color: #CAE9BE;
+  background-color: #A5D8FF;
   display: flex;
   align-items: center;
   column-gap: 12px;
@@ -220,7 +223,7 @@ export default {
 .conclusion .conclusion_content p{
   color: #2c2c2c;
   font-size: 18px;
-  line-height: 21px;
+  /*line-height: 21px;*/
 }
 @media screen and (max-width: 1440px){
   .all .concept .concept_top {
