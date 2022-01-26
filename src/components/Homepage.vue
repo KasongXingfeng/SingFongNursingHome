@@ -74,9 +74,9 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 379px;
   width: 100%;
-  background-image: url('../assets/img/unsplash_VUOiQW4OeLIcover.png');
+  background-image: url('../assets/img/unsplash_78hTqvjYMS4.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

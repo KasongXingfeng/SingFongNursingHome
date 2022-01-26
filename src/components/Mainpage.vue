@@ -94,11 +94,11 @@ export default {
   align-items: center;
   justify-content: space-between;
   background-color: #479EE5;
+  padding: 0%;
 }
 .navbar .picture {
-  /*height: 104px;*/
-  width: 50px;
-  margin: 22px 6%;
+  height: 70px;
+  margin: 2px;
 }
 .navbar .links{
   display: flex;
@@ -204,11 +204,11 @@ export default {
   right: 20px;
   top: 24px;
 }
-@media screen and (max-width: 1440px) {
+/*@media screen and (max-width: 1440px) {
   .navbar .picture{
     width: 60%;
   }
-}
+}*/
 @media screen and (max-width: 1024px) {
   .navbar .links{
     display: none;
