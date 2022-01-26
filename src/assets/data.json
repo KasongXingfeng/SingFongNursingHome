@@ -155,4 +155,22 @@
   "text":"由專業照護服務員提供住民日常生活照顧，並且與家屬建立良好溝通管理，可讓家屬了解住民生活狀況",
   "picture":"service_image4"
   }
+  ],"environments":[
+    {
+    "topic":"一樓休閒庭院",
+    "title":"房舍外的休閒庭園有植栽，讓長輩即便位於都市中仍能享受休閒與寧靜",
+    "picture":"environment_outdoor"
+    },{
+    "topic":"交誼廳",
+    "title":"提供採光良好的交誼廳，讓長輩有足夠的活動空間",
+    "picture":"environment_leisure"
+    },{
+    "topic":"宗教室",
+    "title":"配合長輩的信仰提供宗教室，讓他們心靈有所寄託",
+    "picture":"environment_worship"
+    },{
+    "topic":"會議室",
+    "title":"",
+    "picture":"environment_meeting"
+    }
   ]}

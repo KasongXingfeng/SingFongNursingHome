@@ -12,7 +12,7 @@
         <div class="title_line"></div>
       </div>
       <div class="concept_content">
-        <p> 於民國94年立案,本院位處都會是一般型態的護理之家,秉持多元化的照護理念,環境清幽,是適合休養的地方，工作人員24小時親切的服務,讓每位住民都有家的感覺,備受尊重,像一家人一般,歡迎蒞臨參觀。</p>
+        <p> 於民國94年立案，本院位處都會是一般型態的護理之家，秉持多元化的照護理念，環境清幽，是適合休養的地方，工作人員24小時親切的服務,讓每位住民都有家的感覺,備受尊重,像一家人一般,歡迎蒞臨參觀。</p>
       </div>
     </div>
     <div class="objectives">
@@ -314,6 +314,9 @@ export default {
   }
   .conclusion .conclusion_content p {
     font-size: 14px;
+  }
+  .all .concept .concept_content {
+    width: 80%;
   }
 }
 @media screen and (max-width: 480px) {

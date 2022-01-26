@@ -33,7 +33,7 @@
           <div class="left">
             <div class="contact_title">與我們聯絡</div>
             <div class="contact_subtitle">Contact Us</div>
-            <img src="./../assets/line.png" style="height:95px">
+            <img class="qrcode" src="./../assets/line.png" style="height:95px">
           </div>
           <div class="right" >
             <div v-for="item in data" :key="item" class="column">
@@ -209,6 +209,9 @@ export default {
   right: 20px;
   top: 24px;
 }
+.qrcode2 {
+  display: none;
+}
 /*@media screen and (max-width: 1440px) {
   .navbar .picture{
     width: 60%;
@@ -228,6 +231,30 @@ export default {
   }
   .footer .right .column {
     column-gap: 4px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .picture2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer .contact .contact_content {
+    flex-direction: column;
+  }
+  .footer .left {
+    border-right: none;
+    border-bottom: 2px solid #2F6098;
+    padding-bottom: 12px;
+    padding-right: 0;
+    margin-right: 0;
+    row-gap: 8px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .qrcode {
+    display: none;
   }
 }
 </style>
