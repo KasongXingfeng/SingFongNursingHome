@@ -12,91 +12,82 @@
         </div>
       </div>
     </div>
-    <div class="area">
-      <div class="tag">
-        <span class="tag_circle">
-          <img src="./../assets/img/CloseUp.svg" />
-        </span>
-        <span class="description">休閒區域</span>
-      </div>
-      <div class="pic_set">
-        <!-- <img src="./../assets/environment/environment_outdoor1.jpg" />
-        <img src="./../assets/environment/environment_indoor3.jpg" />
-        <img src="./../assets/environment/environment_outdoor3.jpg" /> -->
-      </div>
-      <div class="content">
-        <p style="text-align: justify;">房舍外有步道，周圍有種植花草，供住民平時活動、日光浴，慢活樂趣。</p>
-      </div>
-    </div>
-    <div class="area">
+    <div class="area relax">
       <div class="tag">
         <span class="tag_circle">
           <img src="./../assets/img/bi_house-door-fill.svg" />
         </span>
-        <span class="description">院內環境</span>
+        <span class="description">休閒區域</span>
       </div>
-      <div class="indoor_content">
-        <div class="indoor_column">
-          <div class="indoor_pic_set">
-            <!-- <img src="./../assets/environment/environment_indoor2.jpg" /> -->
-            <!-- <img src="./../assets/environment/environment_indoor10.jpg" /> -->
-          </div>
-          <div class="indoor_text">
-            <div class="title">休閒交誼廳</div>
-            <div class="line"></div>
-            <p>走廊光明清幽、中庭擺設電視，提供住民休閒娛樂。</p>
-          </div>
-        </div>
-        <div class="indoor_column">
-          <div class="indoor_pic_set">
-            <!-- <img src="./../assets/environment/environment_119_1.jpg" /> -->
-            <!-- <img src="./../assets/environment/environment_119_2.jpg" /> -->
-          </div>
-          <div class="indoor_text">
-            <div class="title">消防疏散避難系統</div>
-            <div class="line"></div>
-            <p>設有自動灑水設備、119自動通報系統，讓行動不便長輩多一層保障。</p>
-          </div>
-        </div>
-        <div class="indoor_column">
-          <div class="indoor_pic_set">
-            <!-- <img src="./../assets/environment/environment_bathroom2.jpg" /> -->
-            <!-- <img src="./../assets/environment/environment_bathroom1.jpg" /> -->
-          </div>
-          <div class="indoor_text">
-            <div class="title">護理服務設施－盥洗區</div>
-            <div class="line"></div>
-            <p>設有無障礙盥洗空間，讓長輩可以更方便、安全地清潔。</p>
-          </div>
+      <div class="relax_inside">
+        <div v-for="item in data" :key="item" class="card">
+          <div class="title">{{item.topic}}</div>
+          <div class="line"></div>
+          <div class="text">{{item.title}}</div>
+          <img class="picture" v-bind:src="require('./../assets/environment/' + item.picture + '.jpg')" />
         </div>
       </div>
+      <!-- <section>
+        <div v-for="(item,index) in data" :key="item">
+          <div class="service_top" v-if="index==nowPic">
+            <div class="left">
+              <img class="picture" v-bind:src="require('./../assets/environment/' + item.picture + '.jpg')" />
+            </div>
+            <div class="right">
+              <div></div>
+              <div>
+                <div class="relax_topic">{{item.topic}}</div>
+                <div class="line"></div>
+              </div>
+              <p class="title">{{item.title}}</p>
+              <div class="dots">
+                <span class="dot" v-for="(item,index) in data" :key="item" v-on:click="selectPic(index)" v-bind:class="[nowPic==index?'selected':'unselected']"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
     </div>
     <div class="area">
-      <div class="tag">
-        <span class="tag_circle">
-          <img src="./../assets/img/Insomnia.svg" />
-        </span>
-        <span class="description">寢室環境</span>
+      <div class="room">
+        <div class="tag">
+          <span class="tag_circle">
+            <img src="./../assets/img/Insomnia.svg" />
+          </span>
+          <span class="description">住房環境</span>
+        </div>
+        <span style="margin-left: 12px">總床數53床</span>
       </div>
       <div class="pic_set">
-        <!-- <img src="./../assets/environment/environment_indoor9.jpg" /> -->
-        <!-- <img src="./../assets/environment/environment_indoor7.jpg" /> -->
-        <!-- <img src="./../assets/environment/environment_bed.jpg" /> -->
-      </div>
-      <div class="content">
-        <p style="text-align: justify;">寢室格局有雙人房、六人房，皆有獨立廁所、冷氣，配備床、床旁桌、頭燈、圍簾，以及個人獨立衣櫥，收納空間相當充足。</p>
+        <div class="card">
+          <div class="title">獨立單人房</div>
+          <div class="line"></div>
+          <img src="./../assets/environment/environment_room1.jpg" />
+        </div>
+        <div class="card">
+          <div class="title">多人住房</div>
+          <div class="line"></div>
+          <img src="./../assets/environment/environment_room2.jpg" />
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
 import dataset from '../assets/data.json'
-const data = dataset.objectives
+const data = dataset.environments
+const nowPic = 0
 export default {
   name: 'environment',
   data () {
     return {
-      data: data
+      data: data,
+      nowPic: nowPic
+    }
+  },
+  methods: {
+    selectPic: function (index) {
+      this.nowPic = index
     }
   },
   props: {
@@ -107,15 +98,14 @@ export default {
 </script>
 <style scoped>
 .all .top {
-  margin-top: 5px;
   display: flex;
   width: 100%;
   height: 480px;
 }
-.all .left {
+.all .top .left {
   width: 50%;
   height: 100%;
-  /* background-image: url('../assets/environment/environment_door2.jpg'); */
+  background-image: url('../assets/environment/environment_door.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 -10px;
@@ -146,20 +136,20 @@ export default {
   font-size: 32px;
   font-weight: bold;
   line-height: 37px;
-  color: #29471c;
+  color: #2F6098;
   margin-bottom: 4px;
 }
 .topic_eng {
   font-size: 24px;
   font-weight: bold;
   line-height: 28px;
-  color: #805800;
+  color: #888888;
   margin-bottom: 10px;
 }
 .title_line{
   height: 2px;
   width: 58px;
-  background-color: #29471c;
+  background-color: #2F6098;
 }
 .all {
   display: flex;
@@ -170,16 +160,25 @@ export default {
 .area {
   width: 80%;
 }
-.tag{
+.relax .tag{
   width: 300px;
   border-radius: 99px;
-  background-color: #CAE9BE;
+  background-color: #A5D8FF;
   display: flex;
   align-items: center;
   column-gap: 32px;
   padding: 5px 48px 5px 5px;
   margin-top: 72px;
   margin-bottom: 40px;
+}
+.room .tag{
+  width: 300px;
+  border-radius: 99px;
+  background-color: #A5D8FF;
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+  padding: 5px 48px 5px 5px;
 }
 .tag_circle{
   background-color: #ffffff;
@@ -213,6 +212,7 @@ export default {
 .pic_set {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   column-gap: 12px;
@@ -225,47 +225,128 @@ export default {
   flex-direction: column;
   row-gap: 36px;
 }
-.title {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 28px;
-  color: #29471c;
-}
 .line {
   height: 4px;
   width: 58px;
-  background-color: #29471c;
+  margin: auto;
+  background-color: #2F6098;
 }
-.indoor_column {
+.service_top {
+  width: 100%;
   display: flex;
 }
-.indoor_column .indoor_text {
+.service_top .left {
+  height: 400px;
+  background-color: #eee;
+}
+.service_top .left .picture {
+  height: 100%;
+}
+.service_top .right {
   width: 70%;
+  height: auto;
+  background-color: #A5D8FF;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  row-gap: 16px;
-  padding: 5px 2%;
+  justify-content: space-between;
+  padding: 24px 12px;
 }
-.indoor_column .indoor_text p {
+.service_top .right .title {
+  font-size: 25px;
+  line-height: 28px;
+  color: #2C2C2C;
+}
+.service_top .right .dots {
+  display: flex;
+  column-gap: 12px;
+}
+.service_top .right .dot {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+.selected {
+  background-color: #2F6098;
+}
+.unselected {
+  background-color: #c4c4c4;
+}
+.relax_topic {
+  color: #2F6098;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 46px;
+  margin-bottom: 24px;
+}
+.room {
+  display: flex;
+  margin-top: 72px;
+  margin-bottom: 40px;
+  align-items: center;
+}
+.pic_set .card {
+  background-color: #fff;
+  width: 48%;
+  padding: 32px 0;
+  /* height: 430px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  /* row-gap: 2px; */
+  border: solid 1px #eee;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+}
+.card .title {
+  font-weight: bold;
+  font-size: 24px;
+  color: #2F6098;
+  margin-bottom: 24px;
+}
+.pic_set .card img {
+  width: 80%;
+  margin-top: 24px;
+}
+.relax .relax_inside{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 24px;
+  justify-content: space-between;
+}
+.relax .relax_inside .card {
+  width: 48%;
+  padding: 32px 0;
+  border: solid 1px #eee;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+}
+.relax .relax_inside .card img {
+  width: 80%;
+  margin-top: 24px;
+}
+.relax_inside .text {
   font-size: 18px;
-}
-.indoor_column .indoor_pic_set {
-  width: 75%;
-}
-.indoor_column .indoor_pic_set img{
-  width: 50%;
+  line-height: 21px;
+  color: #2C2C2C;
+  padding: 20px 10% 0 10%;
+  text-align: left;
 }
 @media screen and (max-width: 768px) {
   .all .top {
     flex-direction: column;
     height: 500px;
   }
-  .all .left {
+  .all .top .left {
     width: 100%;
   }
-  .all .right {
+  .all .top .right {
     width: 100%;
   }
   .all .right .right_inside {
@@ -274,10 +355,20 @@ export default {
   .content {
     margin: 24px 20px 0px 20px;
   }
+  .relax .relax_inside .card {
+    width: 100%;
+  }
+  .pic_set .card {
+    width: 100%;
+  }
+  .room {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 @media only screen and (max-width: 480px) {
   .area {
-    width: 100%;
+    width: 90%;
   }
   .topic_title {
     font-size: 30px;
@@ -289,9 +380,16 @@ export default {
     font-size: 16px;
     margin-top: 12px;
   }
-  .tag {
+  .relax .tag {
     width: 90%;
     margin: 20px auto 12px auto;
+  }
+  .room .tag {
+    width: 90%;
+    margin: 20px auto 12px auto;
+  }
+  .room {
+    align-items: center;
   }
   .pic_set{
     flex-direction: column;
@@ -304,23 +402,11 @@ export default {
     align-items: center;
     flex-direction: column;
   }
-  .indoor_column .indoor_text {
-    margin-top: 10px;
-  }
-  .indoor_column .indoor_pic_set {
-    width: 85%;
-  }
-  .indoor_column .indoor_pic_set img{
-    width: 50%;
-  }
   .line {
     width: 50%;
-    background-color: #29471c;
+    background-color: #2F6098;
   }
   .area .content p {
-    font-size: 16px;
-  }
-  .indoor_column .indoor_text p {
     font-size: 16px;
   }
   .content {
