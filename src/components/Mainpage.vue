@@ -1,7 +1,8 @@
 <template>
   <div class="navbar" v-on:click="closeNav">
     <router-link to="/" style="display: flex; justify-content: flex-start;">
-      <img class="picture" src="./../assets/image2.png">
+      <img class="picture1" src="./../assets/image2.png">
+      <img class="picture2" src="./../assets/image3.png">
     </router-link>
     <div class="links">
       <router-link to="/orginazation" class="link">組織架構</router-link>
@@ -49,7 +50,7 @@
 </template>
 <script>
 import dataset from './../assets/data.json'
-const data = dataset.singfong
+const data = dataset.xingfeng
 export default {
   name: 'mainpage',
   data () {
@@ -96,9 +97,13 @@ export default {
   background-color: #479EE5;
   padding: 0%;
 }
-.navbar .picture {
+.navbar .picture1 {
   height: 70px;
   margin: 2px;
+}
+.navbar .picture2 {
+  height: 50px;
+  margin: 18px 0 2px;
 }
 .navbar .links{
   display: flex;
@@ -217,7 +222,7 @@ export default {
     display: block;
   }
   .footer .left {
-    border-right: 2px solid #578369;
+    border-right: 2px solid #2F6098;
     padding-right: 12px;
     margin-right: 12px;
   }
