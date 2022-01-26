@@ -14,8 +14,9 @@
           <img class="picture" v-bind:src="require('./../assets/service/' + item.picture + '.jpg')" />
         </div>
         <div class="right">
-          <div></div>
-          <p class="title">{{item.title}}</p>
+          <div class="topic_title">{{item.title}}</div>
+          <div class="title_line"></div>
+          <p class="text">{{item.text}}</p>
           <div class="dots">
             <span class="dot" v-for="(item,index) in introduction" :key="item" v-on:click="selectPic(index)" v-bind:class="[nowPic==index?'selected':'unselected']"></span>
           </div>
@@ -43,14 +44,14 @@
     <div class="charges">
     <div class="charges_top">
       <div class="topic_title">收費標準</div>
-      <div class="topic_eng">charges</div>
+      <div class="topic_eng">Charges</div>
       <div class="title_line"></div>
     </div>
     <div class="charges_content">
       <div class="box" v-for="item in charges" :key="item">
         <div class="tag">
           <span class="tag_circle">
-            <img v-bind:src="require('./../assets/img/' + item.icon + '.svg')" />
+            <img v-bind:src="require('./../assets/img/' + item.icon + '.png')" />
           </span>
           <span class="description">{{ item.charge }}</span>
         </div>
@@ -85,14 +86,14 @@ export default {
   },
   created () {
     this.timer = setInterval(() => {
-      if (this.nowPic >= 8) {
+      if (this.nowPic >= 3) {
         this.nowPic = 0
       } else {
         console.log(this.nowPic)
         this.nowPic += 1
       }
       // 定時器的回撥函式中需要注意 this 指向
-    }, 5000)
+    }, 1000000000)
   },
   methods: {
     selectPic: function (index) {
@@ -107,16 +108,26 @@ export default {
 </script>
 <style scoped>
 .service{
-  width: 100%;
-  height: 248px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .service .service_bar{
-  text-align: left;
-  border-top: 10%;
+   /*text-align: left;
+  padding-top: 5%;
+  padding-left: 10px;*/
+  width: 60%;
+  margin: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .service_top {
   width: 100%;
   display: flex;
+  margin: 2px;
 }
 .service_top .left {
   width: 50%;
@@ -130,21 +141,32 @@ export default {
 .service_top .right {
   width: 50%;
   height: auto;
-  background-color: #f0fcea;
+  background-color: #A5D8FF;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   /* padding: 10px; */
 }
-.service_top .right .title {
+.service_top .right .topic_title {
+  padding-top: 20%;
+  padding-bottom: 10px;
+}
+/*.service_top .right .title_line{
+  margin-top: 0;
+}*/
+.service_top .right .text {
+  border-top: 20%;
   font-size: 25px;
   line-height: 28px;
   color: #2C2C2C;
+  width: 80%;
+
 }
 .service_top .right .dots {
   display: flex;
   column-gap: 12px;
+  border-bottom: 20px;
 }
 .service_top .right .dot {
   border-radius: 50%;
@@ -172,7 +194,7 @@ export default {
   background-color: #2F6098;
 }
 .selected {
-  background-color: #578369;
+  background-color: #2F6098;
 }
 .unselected {
   background-color: #c4c4c4;
@@ -202,7 +224,8 @@ export default {
   row-gap: 24px;
 }
 .client_content .column {
-  width: 47%;
+  width: 325px;
+  text-align: center;
   border-radius: 99px;
   background-color: #A5D8FF;
   display: flex;
@@ -221,6 +244,7 @@ export default {
 }
 .client_content .description{
   font-size: 18px;
+  text-align: center;
   line-height: 21px;
   /* padding: 5px 0; */
   color: #2C2C2C;
@@ -247,7 +271,7 @@ export default {
   row-gap: 42px;
 }
 .charges_content .box{
-  height: 316px;
+  height: 260px;
   border: solid 1px #ACACAC;
   width: 47%;
   border-radius: 8px;
@@ -259,7 +283,7 @@ export default {
 .charges_content .box .tag{
   /* width: 220px; */
   border-radius: 99px;
-  background-color: #CAE9BE;
+  background-color: #A5D8FF;
   display: flex;
   align-items: center;
   column-gap: 32px;
@@ -274,6 +298,9 @@ export default {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+}
+.charges_content .tag_circle img{
+  width: 30px;
 }
 .charges_content .description{
   font-size: 18px;
@@ -293,19 +320,22 @@ export default {
 .charges_content .box_inside .detail .detail_name{
   font-weight: 500;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 33px;
   color: #2C2C2C;
 }
 .charges_content .box_inside .detail .detail_price{
   font-weight: 500;
   font-size: 18px;
   line-height: 100%;
-  color: #805800;
+  color: #2F6098;
 }
 .client_content .client_circle img{
     width: 32px;
 }
 @media only screen and (max-width: 1440px) {
+  .service .service_bar{
+    width: 75%;
+  }
   .client .client_top {
       width: 75%;
   }

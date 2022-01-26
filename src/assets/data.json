@@ -45,12 +45,20 @@
 ],
 "charges":[
   {
-    "icon":"Nurse",
-    "charge":"生活照護",
+    "icon":"ambulatory",
+    "charge":"月費",
     "charge_item":[
       {
-        "item_name":"六人房",
-        "price":"NT 33,000 / 月"
+        "item_name":"月費",
+        "price":"NT 34,000 / 月"
+      },
+      {
+        "item_name":"(生活照護費、伙食費)",
+        "price":" "
+      },
+      {
+        "item_name":" ",
+        "price":" "
       },
       {
         "item_name":"雙人房",
@@ -59,12 +67,12 @@
     ]
   },
   {
-    "icon":"OxygenMask",
+    "icon":"maki_doctor",
     "charge":"管路照護",
     "charge_item":[
       {
         "item_name":"鼻胃管護理",
-        "price":"NT 1,500 / 月"
+        "price":"NT 2,000 / 月"
       },
       {
         "item_name":"導尿管護理",
@@ -72,54 +80,34 @@
       },
       {
         "item_name":"氣切護理",
-        "price":"NT 3,000 / 月"
+        "price":"NT 2,000 / 月"
       }
     ]
   },
   {
-    "icon":"ScubaTank",
-    "charge":"氧氣服務",
+    "icon":"Vector",
+    "charge":"其他費用",
     "charge_item":[
       {
-        "item_name":"氧氣(鋼管)",
-        "price":"NT 100 / hr"
+        "item_name":"傷口照護費",
+        "price":"依傷口大小狀況收費"
       },
       {
-        "item_name":"24小時氧氣機租借",
+        "item_name":"製氧機",
         "price":"NT 3,000 / 月"
       }
     ]
   },{
-    "icon":"DoctorsFolder",
-    "charge":"自行負擔",
+    "icon":"clinical",
+    "charge":"門診部分",
     "charge_item":[
       {
-        "item_name":"血糖監測(含耗材)",
-        "price":"NT 50 / 次"
+        "item_name":"(1) 住民須診療時,依健保門診方式處理。",
+        "price":" "
       },
       {
-        "item_name":"蒸氣吸入及抽痰",
-        "price":"NT 1,000 / 月"
-      },
-      {
-        "item_name":"氣墊床",
-        "price":"NT 3,000 / 月"
-      },
-      {
-        "item_name":"電費",
-        "price":"NT 500 / 月"
-      },
-      {
-        "item_name":"拋棄式導管",
-        "price":"NT 100 / 組"
-      },
-      {
-        "item_name":"傷口護理",
-        "price":"(小) NT 50 / 日"
-      },
-      {
-        "item_name":"",
-        "price":"(大) NT 100 / 日"
+        "item_name":"(2) 門診掛號、部份負擔藥費，自行給付。",
+        "price":" "
       }
     ]
   }
@@ -151,31 +139,20 @@
   }
   ],"services":[
   {
-  "title":"24小時皆有護理師、照服員輪班，專業的照顧方式，讓家屬安心！",
+  "title":"巡診服務",
+  "text":"由專業照護服務員提供住民日常生活照顧，並且與家屬建立良好溝通管理，可讓家屬了解住民生活狀況",
   "picture":"service_image1"
   },{
-  "title":"24小時皆有護理師、照服員輪班，專業的照顧方式，讓家屬安心！",
+  "title":"跨專業服務團隊",
+  "text":"專業營養師評估提供服務，依個案及疾病需求調整飲食、配方，並且定期由專業的復健師提供復健評估治療",
   "picture":"service_image2"
   },{
-  "title":"定期醫師巡診、外出復健，隨時掌握住民的健康與活動力。",
+  "title":"24小時護理照顧",
+  "text":"專業護理人員24小時值班，負責執行管路照護、傷口換藥",
   "picture":"service_image3"
   },{
-  "title":"定期醫師巡診、外出復健，隨時掌握住民的健康與活動力。",
+  "title":"良好溝通管理",
+  "text":"由專業照護服務員提供住民日常生活照顧，並且與家屬建立良好溝通管理，可讓家屬了解住民生活狀況",
   "picture":"service_image4"
-  },{
-  "title":"定期醫師巡診、外出復健，隨時掌握住民的健康與活動力。",
-  "picture":"service_image5"
-  },{
-  "title":"定期醫師巡診、外出復健，隨時掌握住民的健康與活動力。",
-  "picture":"service_image6"
-  },{
-  "title":"藥師、營養師、社工定期召開會議，針對個案討論照護方法；平時透過教育訓練增加員工知識技能。",
-  "picture":"service_image7"
-  },{
-  "title":"藥師、營養師、社工定期召開會議，針對個案討論照護方法；平時透過教育訓練增加員工知識技能。",
-  "picture":"service_image8"
-  },{
-  "title":"藥師、營養師、社工定期召開會議，針對個案討論照護方法；平時透過教育訓練增加員工知識技能。",
-  "picture":"service_image9"
   }
   ]}

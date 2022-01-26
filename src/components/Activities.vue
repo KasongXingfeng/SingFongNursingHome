@@ -6,9 +6,9 @@
       <div class="title_line"></div>
     </div>
     <div class="activities_content">
-      <div class="card" v-for="item in data.slice((nowPage - 1)*4,(nowPage - 1)*4 + 4)" :key="item">
+      <div class="card" v-for="item in data.slice((nowPage - 1)*6,(nowPage - 1)*6 + 6)" :key="item">
         <div>
-          <img class="picture" v-bind:src="require('./../assets/activity/' + item.picture + '.jpg')" />
+          <img class="picture" v-bind:src="require('./../assets/activity/' + item.picture + '.g')" />
         </div>
         <div class="title">{{item.title}}</div>
         <div class="line"></div>
@@ -24,8 +24,8 @@
 <script>
 import dataset from '../assets/data.json'
 const data = dataset.activities
-let totalPage = parseInt(data.length / 4)
-if (data.length % 4 !== 0) {
+let totalPage = parseInt(data.length / 6)
+if (data.length % 6 !== 0) {
   totalPage = totalPage + 1
 }
 const nowPage = 1
@@ -64,7 +64,7 @@ export default {
   font-size: 32px;
   font-weight: bold;
   line-height: 37px;
-  color: #479EE5;
+  color: #2F6098;
   margin-bottom: 4px;
 }
 .topic_eng {
@@ -77,7 +77,7 @@ export default {
 .title_line{
   height: 2px;
   width: 58px;
-  background-color: #479EE5;
+  background-color: #2F6098;
 }
 .activities {
   display: flex;
@@ -101,9 +101,9 @@ export default {
 }
 .activities_content .card{
   background-color: #fff;
-  width: 48%;
+  width: 32%;
   padding: 18px 0;
-  height: 430px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -125,11 +125,11 @@ export default {
 .activities_content .card .line{
   width: 90px;
   height: 1px;
-  background-color: #479EE5;
+  background-color: #29471C;
 }
 .pagination{
   background-color: #fff;
-  border: 2px solid #A5D8FF;
+  border: 2px solid #CAE9BE;
   box-sizing: border-box;
   border-radius: 99px;
   padding: 18px;
@@ -155,7 +155,7 @@ export default {
 .selected {
   font-size: 18px;
   color: #ffffff;
-  background-color: #479EE5;
+  background-color: #578369;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -163,40 +163,24 @@ export default {
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width: 1440px) {
-.activities .activities_top {
-    width: 80%;
-  }
-  .activities_content {
-    width: 80%;
-  }
-}
 @media only screen and (max-width: 1024px) {
   .activities_content .card{
-    width: 46%;
-    height: 340px;
+    width: 50%;
   }
   .activities_content .card .picture{
-    width: 92%;
+    width: 100%;
     height: 100%;
     /* background-color: #ddd; */
   }
 }
 @media only screen and (max-width: 480px) {
-  .activities .activities_top {
-    /* margin: ; */
-  }
   .activities_content .card{
     width: 100%;
   }
-  .topic_title {
-    font-size: 30px;
-  }
-  .topic_eng {
-    font-size: 20px;
-  }
-  .activities_content .card .title {
-    font-size: 20px;
+  .activities_content .card .picture{
+    width: 100%;
+    height: 100%;
+    /* background-color: #ddd; */
   }
 }
 </style>
