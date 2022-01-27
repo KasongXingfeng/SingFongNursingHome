@@ -6,9 +6,9 @@
       <div class="title_line"></div>
     </div>
     <div class="activities_content">
-      <div class="card" v-for="item in data.slice((nowPage - 1)*6,(nowPage - 1)*6 + 6)" :key="item">
+      <div class="card" v-for="item in data.slice((nowPage - 1)*4,(nowPage - 1)*4 + 4)" :key="item">
         <div>
-          <img class="picture" v-bind:src="require('./../assets/activity/' + item.picture + '.g')" />
+          <img class="picture" v-bind:src="require('./../assets/activity/' + item.picture + '.jpg')" />
         </div>
         <div class="title">{{item.title}}</div>
         <div class="line"></div>
@@ -24,8 +24,8 @@
 <script>
 import dataset from '../assets/data.json'
 const data = dataset.activities
-let totalPage = parseInt(data.length / 6)
-if (data.length % 6 !== 0) {
+let totalPage = parseInt(data.length / 4)
+if (data.length % 4 !== 0) {
   totalPage = totalPage + 1
 }
 const nowPage = 1
@@ -101,21 +101,21 @@ export default {
 }
 .activities_content .card{
   background-color: #fff;
-  width: 32%;
+  width: 48%;
   padding: 18px 0;
-  height: 400px;
+  /* height: 400px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  /* row-gap: 2px; */
+  row-gap: 18px;
   border: solid 1px #eee;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
 }
 .activities_content .card .picture{
   width: 90%;
   height: 90%;
-  /* background-color: #ddd; */
+  background-color: #ddd;
 }
 .activities_content .card .title{
   font-size: 24px;
@@ -125,11 +125,11 @@ export default {
 .activities_content .card .line{
   width: 90px;
   height: 1px;
-  background-color: #29471C;
+  background-color: #2F6098;
 }
 .pagination{
   background-color: #fff;
-  border: 2px solid #CAE9BE;
+  border: 2px solid #A5D8FF;
   box-sizing: border-box;
   border-radius: 99px;
   padding: 18px;
@@ -155,7 +155,7 @@ export default {
 .selected {
   font-size: 18px;
   color: #ffffff;
-  background-color: #578369;
+  background-color: #2F6098;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -164,23 +164,20 @@ export default {
   justify-content: center;
 }
 @media only screen and (max-width: 1024px) {
-  .activities_content .card{
-    width: 50%;
-  }
   .activities_content .card .picture{
-    width: 100%;
     height: 100%;
     /* background-color: #ddd; */
+  }
+  .activities .activities_top {
+    width: 80%;
+  }
+  .activities_content {
+    width: 80%;
   }
 }
 @media only screen and (max-width: 480px) {
   .activities_content .card{
     width: 100%;
-  }
-  .activities_content .card .picture{
-    width: 100%;
-    height: 100%;
-    /* background-color: #ddd; */
   }
 }
 </style>
