@@ -62,6 +62,12 @@
           </div>
         </div>
       </div>
+      <div class="note">
+        <div class="tag">備註</div>
+        <div class="note_text" v-for="(item,index) in note" :key="item" >
+          <span>({{index+1}}) {{item.text}}</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -72,6 +78,7 @@ import { setInterval } from 'timers'
 const introduction = dataset.services
 const client = dataset.client
 const charges = dataset.charges
+const note = dataset.note
 const nowPic = 0
 export default {
   name: 'service',
@@ -79,6 +86,7 @@ export default {
     return {
       client: client,
       charges: charges,
+      note: note,
       introduction: introduction,
       nowPic: nowPic,
       timer: 0
@@ -93,7 +101,7 @@ export default {
         this.nowPic += 1
       }
       // 定時器的回撥函式中需要注意 this 指向
-    }, 1000000000)
+    }, 5000)
   },
   methods: {
     selectPic: function (index) {
@@ -131,7 +139,7 @@ export default {
 }
 .service_top .left {
   width: 50%;
-  height: 600px;
+  height: 524px;
   background-color: #eee;
 }
 .service_top .left .picture {
@@ -145,8 +153,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*justify-content: space-between;*/
-  /* padding: 10px; */
+  justify-content: space-between;
+  padding: 10px;
 }
 .service_top .right .topic_title {
   padding-top: 20%;
@@ -156,17 +164,19 @@ export default {
   margin-top: 0;
 }*/
 .service_top .right .text {
-  border-top: 20%;
+  margin-top: 20%;
+  margin-bottom: 35%;
   font-size: 25px;
   line-height: 28px;
   color: #2C2C2C;
-  width: 80%;
+  width: 85%;
 
 }
 .service_top .right .dots {
   display: flex;
+  position: relative;
   column-gap: 12px;
-  border-bottom: 20px;
+  bottom: 0;
 }
 .service_top .right .dot {
   border-radius: 50%;
@@ -310,7 +320,7 @@ export default {
   color: #2C2C2C;
 }
 .charges_content .box_inside{
-  width: 60%;
+  width: 80%;
 }
 .charges_content .box_inside .detail{
   display: flex;
@@ -332,6 +342,20 @@ export default {
 .client_content .client_circle img{
     width: 32px;
 }
+.charges_content .note .tag{
+  text-align: center;
+  /*align-items: center;*/
+  display: flex;
+  border-radius: 99px;
+  background-color: #A5D8FF;
+  padding: 3px 3px 3px 19px;
+  width: 75px;
+  height: 30px;
+  font-weight: bold;
+}
+.charges_content .note .note_text{
+  text-align: left;
+}
 @media only screen and (max-width: 1440px) {
   .service .service_bar{
     width: 75%;
@@ -348,9 +372,9 @@ export default {
   .charges_content {
     width: 75%;
   }
-  .charges_content .box_inside{
+  /*.charges_content .box_inside{
     width: 75%;
-  }
+  }*/
   .service_top .left {
     width: 50%;
     height: 700px;
@@ -363,16 +387,16 @@ export default {
   .client_content .columns {
     flex-direction: column;
   }
-  .client_content .column {
+  /*.client_content .column {
     width: auto;
-  }
+  }*/
   .charges_content {
     flex-direction: column;
     margin-bottom: 48px;
   }
   .charges_content .box {
     width: auto;
-    height: auto;
+    /*height: auto;*/
   }
   .charges_content .box_inside .detail .detail_name {
     font-size: 16px;
@@ -402,6 +426,9 @@ export default {
   .client_content .client_circle img{
     width: 20px;
   }
+  /*.client_content .column {
+    width: auto;
+  }*/
   .client_content .columns {
     row-gap: 20px;
   }
@@ -412,7 +439,7 @@ export default {
 }
   @media only screen and (max-width: 480px) {
   .charges_content .box_inside {
-    width: 80%;
+    width: 90%;
   }
   .client_content .description {
     font-size: 12px;
