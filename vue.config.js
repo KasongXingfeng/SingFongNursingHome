@@ -3,11 +3,11 @@
 module.exports = {
     // publicPath 為 project-name，根目錄地址為上傳的網域
     publicPath: '/SingFongNursingHome/',
-    devServer:{
-        public:'140.113.73.54:8080/SingFongNursingHome/',
-        port: 8080,
-        https: false,
-        disableHostCheck: true,
-        open: false
-    }
+    // devServer:{
+    //     public:'140.113.73.54:8080/SingFongNursingHome/',
+    //     port: 8080,
+    //     https: false,
+    //     disableHostCheck: true,
+    //     open: false
+    // }
 };

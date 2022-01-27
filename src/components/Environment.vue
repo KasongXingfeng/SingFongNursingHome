@@ -317,7 +317,7 @@ export default {
   justify-content: space-between;
 }
 .relax .relax_inside .card {
-  width: 48%;
+  width: 46%;
   padding: 32px 0;
   border: solid 1px #eee;
   background-color: #fff;
