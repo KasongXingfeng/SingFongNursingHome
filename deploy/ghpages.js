@@ -5,7 +5,7 @@ const ghpages = require('gh-pages');
 
 const options = {
     branch: 'gh-pages',
-    repo: 'https://github.com/kenchen879/KasongNursingHome.git' // project github repo
+    repo: 'https://github.com/kenchen879/SingFongNursingHome.git' // project github repo
 };
 
 const callback = err => {
