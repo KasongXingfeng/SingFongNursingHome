@@ -97,7 +97,7 @@ export default {
       if (this.nowPic >= 3) {
         this.nowPic = 0
       } else {
-        console.log(this.nowPic)
+        // console.log(this.nowPic)
         this.nowPic += 1
       }
       // 定時器的回撥函式中需要注意 this 指向
@@ -134,12 +134,13 @@ export default {
 }
 .service_top {
   width: 100%;
+  /* height: 600px; */
   display: flex;
-  margin: 2px;
+  /* margin: 2px; */
 }
 .service_top .left {
   width: 50%;
-  height: 524px;
+  height: 600px;
   background-color: #eee;
 }
 .service_top .left .picture {
@@ -148,13 +149,13 @@ export default {
 }
 .service_top .right {
   width: 50%;
-  height: auto;
+  height: 600px;
   background-color: #A5D8FF;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0 1%;
 }
 .service_top .right .topic_title {
   padding-top: 20%;
@@ -164,8 +165,8 @@ export default {
   margin-top: 0;
 }*/
 .service_top .right .text {
-  margin-top: 20%;
-  margin-bottom: 35%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   font-size: 25px;
   line-height: 28px;
   color: #2C2C2C;
@@ -174,9 +175,8 @@ export default {
 }
 .service_top .right .dots {
   display: flex;
-  position: relative;
   column-gap: 12px;
-  bottom: 0;
+  margin-bottom: 30px;
 }
 .service_top .right .dot {
   border-radius: 50%;
@@ -361,7 +361,7 @@ export default {
     width: 75%;
   }
   .client .client_top {
-      width: 75%;
+    width: 75%;
   }
   .client_content {
     width: 75%;
@@ -377,7 +377,11 @@ export default {
   }*/
   .service_top .left {
     width: 50%;
-    height: 700px;
+    height: 650px;
+  }
+  .service_top .right{
+    width: 50%;
+    height: 650px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -404,6 +408,12 @@ export default {
   .charges_content .box_inside .detail .detail_price {
     font-size: 16px;
   }
+  .service_top .left {
+    height: 500px;
+  }
+  .service_top .right{
+    height: 500px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .client_content {
@@ -414,10 +424,6 @@ export default {
   }
   .service_top {
     flex-direction: column;
-  }
-  .service_top .right {
-    width: 100%;
-    padding: 32px 24px;
   }
   .client_content .client_circle {
     width: 30px;
@@ -436,13 +442,18 @@ export default {
     width: 100%;
     height: 450px;
   }
+  .service_top .right{
+    width: 100%;
+    height: 450px;
+    padding: 0;
+  }
 }
   @media only screen and (max-width: 480px) {
   .charges_content .box_inside {
     width: 90%;
   }
   .client_content .description {
-    font-size: 12px;
+    font-size: 14px;
   }
   .topic_title {
     font-size: 30px;
@@ -451,6 +462,10 @@ export default {
     font-size: 20px;
   }
   .service_top .left {
+    width: 100%;
+    height: 350px;
+  }
+  .service_top .right{
     width: 100%;
     height: 350px;
   }

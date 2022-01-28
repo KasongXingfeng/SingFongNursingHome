@@ -177,7 +177,7 @@ export default {
   row-gap: 24px;
 }
 .all .objectives_content .column {
-  width: 325px;
+  width: 50%;
   border-radius: 99px;
   background-color: #A5D8FF;
   display: flex;
@@ -198,7 +198,7 @@ export default {
   color: #888888;
 }
 .all .objectives_content .description{
-  font-size: 18px;
+  font-size: 20px;
   line-height: 21px;
   /* padding: 5px 0; */
   color: #2C2C2C;
@@ -222,7 +222,7 @@ export default {
 }
 .conclusion .conclusion_content p{
   color: #2c2c2c;
-  font-size: 18px;
+  font-size: 24px;
   /*line-height: 21px;*/
 }
 @media screen and (max-width: 1440px){
@@ -313,7 +313,7 @@ export default {
     margin-bottom: 48px;
   }
   .conclusion .conclusion_content p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .all .concept .concept_content {
     width: 80%;
@@ -324,10 +324,10 @@ export default {
     font-size: 36px;
   }
   .all .objectives_content .description {
-    font-size: 12px;
+    font-size: 14px;
   }
   .conclusion .conclusion_content p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .topic_title {
     font-size: 30px;
